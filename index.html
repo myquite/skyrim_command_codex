@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skyrim Console Commands and Item Codes - 16-bit Style">
+    <title>⚔️ SKYRIM COMMAND CODEX ⚔️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scanlines"></div>
+
+    <div class="container">
+        <header class="pixel-border">
+            <div class="dragon-icon">⚔️</div>
+            <h1 class="glitch" data-text="COMMAND CODEX">COMMAND CODEX</h1>
+            <p class="subtitle">~ A Dragonborn's Guide to Console Mastery ~</p>
+            <div class="dragon-icon">🐉</div>
+        </header>
+
+        <div class="search-section pixel-border">
+            <div class="search-container">
+                <label for="search" class="search-label">⚡ SEEK THY COMMAND:</label>
+                <input
+                    type="text"
+                    id="search"
+                    class="search-input pixel-border"
+                    placeholder="Search commands, items, perks..."
+                    autocomplete="off"
+                >
+            </div>
+        </div>
+
+        <nav class="category-nav pixel-border">
+            <div class="nav-title">📜 CATEGORIES:</div>
+            <div class="category-buttons">
+                <button class="category-btn active pixel-border" data-category="all">ALL</button>
+                <button class="category-btn pixel-border" data-category="builder">⚡ BUILDER</button>
+                <button class="category-btn pixel-border" data-category="general_commands">GENERAL</button>
+                <button class="category-btn pixel-border" data-category="player_commands">PLAYER</button>
+                <button class="category-btn pixel-border" data-category="perks">PERKS</button>
+                <button class="category-btn pixel-border" data-category="dragon_shouts">SHOUTS</button>
+                <button class="category-btn pixel-border" data-category="weapons">WEAPONS</button>
+                <button class="category-btn pixel-border" data-category="armor">ARMOR</button>
+                <button class="category-btn pixel-border" data-category="spell_tomes">SPELLS</button>
+                <button class="category-btn pixel-border" data-category="items">ITEMS</button>
+            </div>
+        </nav>
+
+        <div id="builder-section" class="builder-section pixel-border" style="display: none;">
+            <div class="builder-header">
+                <h2 class="builder-title">⚗️ ENCHANTMENT FORGE ⚗️</h2>
+                <p class="builder-subtitle">Craft thy legendary artifacts!</p>
+            </div>
+
+            <div class="builder-grid">
+                <div class="builder-step pixel-border">
+                    <div class="step-number">1</div>
+                    <div class="step-title">SELECT ITEM</div>
+                    <select id="item-select" class="builder-select pixel-border">
+                        <option value="">Choose an item...</option>
+                    </select>
+                    <div id="item-preview" class="item-preview"></div>
+                </div>
+
+                <div class="builder-step pixel-border">
+                    <div class="step-number">2</div>
+                    <div class="step-title">FIRST ENCHANTMENT</div>
+                    <select id="enchant1-category" class="builder-select pixel-border">
+                        <option value="">Choose category...</option>
+                        <option value="resistances">🛡️ Resistances</option>
+                        <option value="attributes">💪 Attributes</option>
+                        <option value="combat_skills">⚔️ Combat Skills</option>
+                        <option value="magic_skills">✨ Magic Skills</option>
+                        <option value="utility">🔧 Utility</option>
+                        <option value="special">🌟 Special</option>
+                    </select>
+                    <select id="enchant1-select" class="builder-select pixel-border" disabled>
+                        <option value="">Select enchantment...</option>
+                    </select>
+                    <div id="enchant1-preview" class="enchant-preview"></div>
+                </div>
+
+                <div class="builder-step pixel-border">
+                    <div class="step-number">3</div>
+                    <div class="step-title">SECOND ENCHANTMENT (Optional)</div>
+                    <select id="enchant2-category" class="builder-select pixel-border">
+                        <option value="">Choose category...</option>
+                        <option value="resistances">🛡️ Resistances</option>
+                        <option value="attributes">💪 Attributes</option>
+                        <option value="combat_skills">⚔️ Combat Skills</option>
+                        <option value="magic_skills">✨ Magic Skills</option>
+                        <option value="utility">🔧 Utility</option>
+                        <option value="special">🌟 Special</option>
+                    </select>
+                    <select id="enchant2-select" class="builder-select pixel-border" disabled>
+                        <option value="">Select enchantment...</option>
+                    </select>
+                    <div id="enchant2-preview" class="enchant-preview"></div>
+                </div>
+            </div>
+
+            <div class="builder-output pixel-border">
+                <div class="output-label">⚡ YOUR COMMAND:</div>
+                <div id="builder-command" class="builder-command">
+                    Select an item and enchantment to generate command...
+                </div>
+                <button id="copy-builder-command" class="copy-builder-btn pixel-border" disabled>
+                    📋 COPY COMMAND
+                </button>
+            </div>
+
+            <div class="builder-tips pixel-border">
+                <div class="tip-title">💡 PRO TIPS:</div>
+                <ul class="tips-list">
+                    <li>First, spawn the base item using player.additem</li>
+                    <li>Drop the item on the ground in-game</li>
+                    <li>Open console (~) and click the item to select it</li>
+                    <li>Paste and execute the enchantment command</li>
+                    <li>Pick up your newly enchanted legendary item!</li>
+                </ul>
+            </div>
+        </div>
+
+        <main>
+            <div class="stats-bar pixel-border">
+                <span class="stat">📊 <span id="result-count">0</span> COMMANDS FOUND</span>
+                <a href="guide.html" class="stat guide-link">📜 HOW TO USE COMMANDS</a>
+            </div>
+
+            <div id="results" class="results-grid">
+                <div class="loading">⏳ LOADING ANCIENT SCROLLS...</div>
+            </div>
+        </main>
+
+        <footer class="pixel-border">
+            <p>⚔️ CRAFTED FOR THE DRAGONBORN ⚔️</p>
+            <p class="footer-tip">TIP: Click any command to copy it to your clipboard!</p>
+        </footer>
+    </div>
+
+    <div class="toast" id="toast">
+        <span class="toast-icon">✓</span>
+        <span class="toast-text">COMMAND COPIED TO CLIPBOARD!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

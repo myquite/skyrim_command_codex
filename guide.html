@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How to Use Console Commands in Skyrim - Complete Guide">
+    <title>⚔️ CONSOLE COMMAND GUIDE ⚔️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .guide-content {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+
+        .guide-section {
+            background: var(--secondary-bg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .guide-section h2 {
+            color: var(--text-gold);
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .guide-section h3 {
+            color: var(--accent-blue);
+            font-size: 0.9rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .guide-section p,
+        .guide-section li {
+            font-size: 0.7rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        .guide-section ul,
+        .guide-section ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .code-block {
+            background: var(--primary-bg);
+            border: 2px solid var(--border-color);
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.7rem;
+            color: var(--accent-gold);
+            overflow-x: auto;
+        }
+
+        .warning {
+            background: rgba(255, 68, 68, 0.1);
+            border-left: 4px solid #ff4444;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .tip {
+            background: rgba(76, 175, 80, 0.1);
+            border-left: 4px solid var(--success);
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            padding: 1rem 2rem;
+            background: var(--secondary-bg);
+            color: var(--text-gold);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: var(--hover-bg);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 0 var(--border-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="scanlines"></div>
+
+    <div class="container">
+        <header class="pixel-border">
+            <div class="dragon-icon">📜</div>
+            <h1 class="glitch" data-text="CONSOLE GUIDE">CONSOLE GUIDE</h1>
+            <p class="subtitle">~ Master the Art of Console Commands ~</p>
+            <div class="dragon-icon">⚔️</div>
+        </header>
+
+        <div class="guide-content">
+            <a href="index.html" class="back-link pixel-border">← BACK TO COMMAND CODEX</a>
+
+            <div class="guide-section pixel-border">
+                <h2>🎮 OPENING THE CONSOLE</h2>
+                <p>To access the developer console in Skyrim, press the <strong>tilde key (~)</strong> on your keyboard. This is usually located below the Escape key and to the left of the number 1.</p>
+
+                <div class="tip">
+                    <strong>💡 TIP:</strong> On some keyboards (especially non-US layouts), you may need to press a different key. Try the key to the left of "1" or check your keyboard layout.
+                </div>
+
+                <p>Once opened, you'll see a dark overlay appear with a blinking cursor where you can type commands.</p>
+
+                <h3>Closing the Console</h3>
+                <p>Press the tilde key (~) again to close the console and return to gameplay.</p>
+            </div>
+
+            <div class="guide-section pixel-border">
+                <h2>⚡ ENTERING COMMANDS</h2>
+
+                <h3>Basic Command Entry</h3>
+                <ol>
+                    <li>Open the console with the ~ key</li>
+                    <li>Type or paste your command</li>
+                    <li>Press Enter to execute</li>
+                    <li>Close the console with ~ to continue playing</li>
+                </ol>
+
+                <div class="code-block">
+                    Example: tgm
+                </div>
+
+                <h3>Commands with Parameters</h3>
+                <p>Many commands require additional values (parameters). Replace the # or placeholder text with your desired number:</p>
+
+                <div class="code-block">
+                    player.setav health 500<br>
+                    player.additem 0000000f 1000<br>
+                    player.modav carryweight 500
+                </div>
+
+                <h3>Item and Perk IDs</h3>
+                <p>When adding items or perks, you need their ID code:</p>
+
+                <div class="code-block">
+                    player.additem [ITEM-ID] [QUANTITY]<br>
+                    player.addperk [PERK-ID]
+                </div>
+
+                <div class="tip">
+                    <strong>💡 TIP:</strong> Use the Command Codex to quickly find and copy item IDs and commands!
+                </div>
+            </div>
+
+            <div class="guide-section pixel-border">
+                <h2>📋 BATCH FILES - ADVANCED</h2>
+                <p>Batch files allow you to execute multiple console commands at once. This is incredibly useful for setting up your character or testing builds.</p>
+
+                <h3>Creating a Batch File</h3>
+                <ol>
+                    <li>Open a text editor (Notepad, Notepad++, etc.)</li>
+                    <li>Type your commands, one per line</li>
+                    <li>Save the file with a .txt extension</li>
+                    <li>Place it in your Skyrim directory (where SkyrimSE.exe is located)</li>
+                </ol>
+
+                <h3>Example Batch File: "archer.txt"</h3>
+                <div class="code-block">
+                    ; Archer Build Setup<br>
+                    player.setav health 200<br>
+                    player.setav stamina 300<br>
+                    player.addperk babed<br>
+                    player.addperk 58f6f<br>
+                    player.additem 13965 1<br>
+                    player.additem f 5000
+                </div>
+
+                <div class="tip">
+                    <strong>💡 TIP:</strong> Lines starting with semicolon (;) are comments and will be ignored. Use them to organize your batch file!
+                </div>
+
+                <h3>Running a Batch File</h3>
+                <p>In the console, type:</p>
+                <div class="code-block">
+                    bat filename
+                </div>
+                <p>Don't include the .txt extension. For example, to run "archer.txt":</p>
+                <div class="code-block">
+                    bat archer
+                </div>
+
+                <h3>Batch File Location</h3>
+                <p>Place your .txt files here:</p>
+                <div class="code-block">
+                    Steam: C:\Program Files (x86)\Steam\steamapps\common\Skyrim Special Edition\<br>
+                    <br>
+                    GOG: C:\GOG Games\Skyrim Special Edition\
+                </div>
+            </div>
+
+            <div class="guide-section pixel-border">
+                <h2>⚠️ WARNINGS & BEST PRACTICES</h2>
+
+                <div class="warning">
+                    <strong>⚠️ WARNING:</strong> Using console commands disables achievements for that save file! Create a separate save before experimenting.
+                </div>
+
+                <h3>Save Before Using Commands</h3>
+                <p>Always create a manual save before using console commands, especially if you're unfamiliar with them. Some commands can break quests or cause instability.</p>
+
+                <h3>Dangerous Commands to Avoid</h3>
+                <ul>
+                    <li><strong>killall</strong> - Kills all NPCs in the area (can break quests)</li>
+                    <li><strong>resurrect</strong> - Can cause AI issues if used incorrectly</li>
+                    <li><strong>setstage</strong> - Can break quests if wrong stage is used</li>
+                </ul>
+
+                <h3>Safe Experimentation</h3>
+                <p>These commands are generally safe to experiment with:</p>
+                <ul>
+                    <li><strong>tgm</strong> - Toggle god mode</li>
+                    <li><strong>tcl</strong> - Toggle collision (no-clip mode)</li>
+                    <li><strong>player.additem</strong> - Add items</li>
+                    <li><strong>player.modav</strong> - Modify attributes</li>
+                    <li><strong>coc</strong> - Teleport to locations</li>
+                </ul>
+            </div>
+
+            <div class="guide-section pixel-border">
+                <h2>🎯 ADVANCED TIPS</h2>
+
+                <h3>Clicking Objects</h3>
+                <p>Some commands require you to select an object or NPC:</p>
+                <ol>
+                    <li>Open the console</li>
+                    <li>Click on the object/NPC (their ID will appear at the top)</li>
+                    <li>Type your command (e.g., "disable" or "unlock")</li>
+                    <li>Press Enter</li>
+                </ol>
+
+                <h3>Finding Item IDs In-Game</h3>
+                <p>Drop an item on the ground, open console, click the item. The ID will appear at the top of the console!</p>
+
+                <h3>Console Command History</h3>
+                <p>Use the Up and Down arrow keys to scroll through previously entered commands.</p>
+
+                <div class="tip">
+                    <strong>💡 PRO TIP:</strong> Create multiple batch files for different character builds or testing scenarios. Name them descriptively like "mage-setup.txt" or "test-items.txt"
+                </div>
+            </div>
+
+            <a href="index.html" class="back-link pixel-border">← BACK TO COMMAND CODEX</a>
+        </div>
+
+        <footer class="pixel-border">
+            <p>⚔️ CRAFTED FOR THE DRAGONBORN ⚔️</p>
+            <p class="footer-tip">Remember: Save your game before experimenting!</p>
+        </footer>
+    </div>
+</body>
+</html>

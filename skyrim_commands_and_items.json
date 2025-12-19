@@ -1,0 +1,983 @@
+{
+  "general_commands": {
+    "help": {
+      "command": "help [term] [filter]",
+      "description": "Use the help function to search for the term using a filter (0=show all results)"
+    },
+    "bat": {
+      "command": "bat [file]",
+      "description": "Run a batch file with commands"
+    },
+    "qqq": {
+      "command": "qqq",
+      "description": "Quits the game instantly"
+    },
+    "tgm": {
+      "command": "tgm",
+      "description": "Toggle godmode"
+    },
+    "tim": {
+      "command": "tim",
+      "description": "Toggle immortal mode"
+    },
+    "tcl": {
+      "command": "tcl",
+      "description": "Toggle clipping"
+    },
+    "coc": {
+      "command": "coc <location>",
+      "description": "Fast travel to location, e.g. coc Riverwood"
+    },
+    "coc_qasmoke": {
+      "command": "coc qasmoke",
+      "description": "Fast travel to the testing hall"
+    },
+    "movetoqt": {
+      "command": "movetoqt",
+      "description": "Teleport to the quest target"
+    },
+    "kill": {
+      "command": "kill",
+      "description": "Open console, click on target, type kill to kill it"
+    },
+    "resurrect": {
+      "command": "resurrect",
+      "description": "Open console, click on target, type resurrect to bring it back to life"
+    },
+    "unlock": {
+      "command": "unlock",
+      "description": "In console, target a door/chest so you can see its ID and then type unlock"
+    },
+    "setownership": {
+      "command": "setownership",
+      "description": "In console target an item, type setownership and you can safely take it without stealing"
+    },
+    "set_timescale": {
+      "command": "set timescale to 1",
+      "description": "Sets the timescale to real time, 16 is default"
+    },
+    "tfc": {
+      "command": "tfc",
+      "description": "Toggle freeze time, free camera"
+    },
+    "set_decapitation": {
+      "command": "set DecapitationChance to 50",
+      "description": "Sets chance to decapitate to 50%"
+    },
+    "set_killmove": {
+      "command": "set KillMoveRandom to 50",
+      "description": "Sets chance for finishing moves to 50%"
+    },
+    "addfac": {
+      "command": "addfac [faction-id] 1",
+      "description": "Adds the selected NPC to a faction"
+    },
+    "addfac_marriage": {
+      "command": "addfac 19809 1",
+      "description": "Enables the marriage options for the current selected NPC"
+    },
+    "addfac_follower": {
+      "command": "addfac 5C84D 1",
+      "description": "Enables the follower options for the current selected NPC"
+    },
+    "equipitem": {
+      "command": "equipitem [item-id] 1",
+      "description": "Have your selected follower equip and use the item"
+    },
+    "setessential": {
+      "command": "setessential 0",
+      "description": "Turns the selected NPC mortal, set to 1 to turn the NPC immortal"
+    }
+  },
+  "player_commands": {
+    "showracemenu": {
+      "command": "showracemenu",
+      "description": "You can modify the characters race, gender and appearance"
+    },
+    "modav_carryweight": {
+      "command": "player.modav carryweight 100",
+      "description": "Increase the maximum weight you can carry by 100"
+    },
+    "setav_speedmult": {
+      "command": "player.setav speedmult 120",
+      "description": "Increase the player's speed by 20%, 100 is default"
+    },
+    "setgs_jumpheight": {
+      "command": "player.setgs fJumpHeightMin 120",
+      "description": "Increase the player's jump height by 20%, 100 is default"
+    },
+    "setav_weaponspeed": {
+      "command": "player.setav WeaponSpeedMult 1.2",
+      "description": "Increases the player's swing speed by 20%, 1 is default"
+    },
+    "setav_leftweaponspeed": {
+      "command": "player.setav LeftWeaponSpeedMult 1.2",
+      "description": "Increases the player's left hand swing speed by 20%, 1 is default"
+    },
+    "forceav_shoutrecovery": {
+      "command": "player.forceav shoutrecoverymult 0",
+      "description": "Use Dragonshouts without cooldown, 1 is default"
+    },
+    "setscale": {
+      "command": "player.setscale #",
+      "description": "Changes the size of the player from small 0.1, normal 1 to huge 10"
+    },
+    "advlevel": {
+      "command": "player.advlevel",
+      "description": "Increases current level by 1, caution you can't choose magicka, health or stamina"
+    },
+    "setlevel": {
+      "command": "player.setlevel #",
+      "description": "Changes player level to #, caution you can't choose magicka, health or stamina"
+    },
+    "modav_health": {
+      "command": "player.modav health #",
+      "description": "Modify Health"
+    },
+    "modav_stamina": {
+      "command": "player.modav stamina #",
+      "description": "Modify Stamina"
+    },
+    "modav_magicka": {
+      "command": "player.modav magicka #",
+      "description": "Modify Magicka"
+    },
+    "forceav_dragonsouls": {
+      "command": "player.forceav dragonsouls #",
+      "description": "Set amount of Dragonsouls"
+    },
+    "modav_dragonsouls": {
+      "command": "player.modav dragonsouls #",
+      "description": "Adds # Dragonsouls"
+    },
+    "psb": {
+      "command": "psb",
+      "description": "Gives the player all shouts (souls still required), spells, animalistic abilities"
+    },
+    "setav_rightitemcharge": {
+      "command": "player.setav rightitemcharge 100",
+      "description": "Sets the charge of the righthand item to 100"
+    },
+    "setav_leftitemcharge": {
+      "command": "player.setav leftitemcharge 100",
+      "description": "Sets the charge of the lefthand item to 100"
+    }
+  },
+  "skill_commands": {
+    "onehanded": {
+      "command": "player.setav onehanded 100",
+      "description": "Set One Handed Skill to 100"
+    },
+    "twohanded": {
+      "command": "player.setav twohanded 100",
+      "description": "Set Two Handed Skill to 100"
+    },
+    "alteration": {
+      "command": "player.setav alteration 100",
+      "description": "Set Alteration Skill to 100"
+    },
+    "conjuration": {
+      "command": "player.setav conjuration 100",
+      "description": "Set Conjuration Skill to 100"
+    },
+    "destruction": {
+      "command": "player.setav destruction 100",
+      "description": "Set Destruction Skill to 100"
+    },
+    "enchanting": {
+      "command": "player.setav enchanting 100",
+      "description": "Set Enchanting Skill to 100"
+    },
+    "illusion": {
+      "command": "player.setav illusion 100",
+      "description": "Set Illusion Skill to 100"
+    },
+    "restoration": {
+      "command": "player.setav restoration 100",
+      "description": "Set Restoration Skill to 100"
+    },
+    "marksman": {
+      "command": "player.setav marksman 100",
+      "description": "Set Archery Skill to 100"
+    },
+    "block": {
+      "command": "player.setav block 100",
+      "description": "Set Block Skill to 100"
+    },
+    "heavyarmor": {
+      "command": "player.setav heavyarmor 100",
+      "description": "Set Heavy Armor Skill to 100"
+    },
+    "smithing": {
+      "command": "player.setav smithing 100",
+      "description": "Set Smithing Skill to 100"
+    },
+    "alchemy": {
+      "command": "player.setav alchemy 100",
+      "description": "Set Alchemy Skill to 100"
+    },
+    "lightarmor": {
+      "command": "player.setav lightarmor 100",
+      "description": "Set Light Armor Skill to 100"
+    },
+    "lockpicking": {
+      "command": "player.setav lockpicking 100",
+      "description": "Set Lock Picking Skill to 100"
+    },
+    "pickpocket": {
+      "command": "player.setav pickpocket 100",
+      "description": "Set Pickpocket Skill to 100"
+    },
+    "sneak": {
+      "command": "player.setav sneak 100",
+      "description": "Set Sneak Skill to 100"
+    },
+    "speechcraft": {
+      "command": "player.setav speechcraft 100",
+      "description": "Set Speech Skill to 100"
+    }
+  },
+  "perks": {
+    "alchemy": [
+      {"id": "be127", "command": "player.addperk be127", "name": "Alchemist", "description": "Potions and poisons you make are 20% stronger"},
+      {"id": "c07ca", "command": "player.addperk c07ca", "name": "Alchemist", "description": "Potions and poisons you make are 40% stronger"},
+      {"id": "c07cb", "command": "player.addperk c07cb", "name": "Alchemist", "description": "Potions and poisons you make are 60% stronger"},
+      {"id": "c07cc", "command": "player.addperk c07cc", "name": "Alchemist", "description": "Potions and poisons you make are 80% stronger"},
+      {"id": "c07cd", "command": "player.addperk c07cd", "name": "Alchemist", "description": "Potions and poisons you make are twice as strong"},
+      {"id": "58215", "command": "player.addperk 58215", "name": "Physician", "description": "Potions you mix that restore Health, Magicka or Stamina are 25% more powerful"},
+      {"id": "58216", "command": "player.addperk 58216", "name": "Benefactor", "description": "Potions you mix with beneficial effects have an additional 25% greater magnitude"},
+      {"id": "58218", "command": "player.addperk 58218", "name": "Experimenter", "description": "Eating an ingredient reveals first two effects"},
+      {"id": "105f2a", "command": "player.addperk 105f2a", "name": "Experimenter", "description": "Eating an ingredient reveals first three effects"},
+      {"id": "105f2b", "command": "player.addperk 105f2b", "name": "Experimenter", "description": "Eating an ingredient reveals all its effects"},
+      {"id": "58217", "command": "player.addperk 58217", "name": "Poisoner", "description": "Poisons you mix are 25% more effective"},
+      {"id": "105f2f", "command": "player.addperk 105f2f", "name": "Concentrated Poison", "description": "Poisons applied to weapons last for twice as many hits"},
+      {"id": "105f2e", "command": "player.addperk 105f2e", "name": "Green Thumb", "description": "Two ingredients are gathered from plants"},
+      {"id": "105f2c", "command": "player.addperk 105f2c", "name": "Snakeblood", "description": "50% resistance to all poisons"},
+      {"id": "5821d", "command": "player.addperk 5821d", "name": "Purity", "description": "All negative effects are removed from created potions, and all positive effects are removed from created poisons"}
+    ],
+    "alteration": [
+      {"id": "f2ca6", "command": "player.addperk f2ca6", "name": "Novice Alteration", "description": "Cast Novice level Alteration spells for half magicka"},
+      {"id": "153cd", "command": "player.addperk 153cd", "name": "Alteration Dual Casting", "description": "Dual casting an Alteration spell overcharges the effects into an even more powerful version"},
+      {"id": "c44b7", "command": "player.addperk c44b7", "name": "Apprentice Alteration", "description": "Cast Apprentice level Alteration spells for half magicka"},
+      {"id": "53128", "command": "player.addperk 53128", "name": "Magic Resistance", "description": "Blocks 10% of a spell's effects"},
+      {"id": "53129", "command": "player.addperk 53129", "name": "Magic Resistance", "description": "Blocks 20% of a spell's effects"},
+      {"id": "5312a", "command": "player.addperk 5312a", "name": "Magic Resistance", "description": "Blocks 30% of a spell's effects"},
+      {"id": "c44b8", "command": "player.addperk c44b8", "name": "Adept Alteration", "description": "Cast Adept level Alteration spells for half magicka"},
+      {"id": "c44b9", "command": "player.addperk c44b9", "name": "Expert Alteration", "description": "Cast Expert level Alteration spells for half magicka"},
+      {"id": "581f7", "command": "player.addperk 581f7", "name": "Atronach", "description": "Absorb 30% of the magicka of any spells that hit you"},
+      {"id": "c44ba", "command": "player.addperk c44ba", "name": "Master Alteration", "description": "Cast Master level Alteration spells for half magicka"},
+      {"id": "581fc", "command": "player.addperk 581fc", "name": "Stability", "description": "Alteration spells have greater duration"},
+      {"id": "d7999", "command": "player.addperk d7999", "name": "Mage Armor", "description": "Protection spells like Stoneflesh are twice as strong if not wearing armor"},
+      {"id": "d799a", "command": "player.addperk d799a", "name": "Mage Armor", "description": "Protection spells like Stoneflesh are 2.5 times as strong if not wearing armor"},
+      {"id": "d799b", "command": "player.addperk d799b", "name": "Mage Armor", "description": "Protection spells like Stoneflesh are three times as strong if not wearing armor"}
+    ],
+    "archery": [
+      {"id": "babed", "command": "player.addperk babed", "name": "Overdraw", "description": "Bows do 20% more damage"},
+      {"id": "7934a", "command": "player.addperk 7934a", "name": "Overdraw", "description": "Bows do 40% more damage"},
+      {"id": "7934b", "command": "player.addperk 7934b", "name": "Overdraw", "description": "Bows do 60% more damage"},
+      {"id": "7934d", "command": "player.addperk 7934d", "name": "Overdraw", "description": "Bows do 80% more damage"},
+      {"id": "79354", "command": "player.addperk 79354", "name": "Overdraw", "description": "Bows do twice as much damage"},
+      {"id": "105f1c", "command": "player.addperk 105f1c", "name": "Critical Shot", "description": "10% chance of a critical hit that does extra damage"},
+      {"id": "105f1e", "command": "player.addperk 105f1e", "name": "Critical Shot", "description": "15% chance of a critical hit that does 25% more critical damage"},
+      {"id": "105f1f", "command": "player.addperk 105f1f", "name": "Critical Shot", "description": "20% chance of a critical hit that does 50% more critical damage"},
+      {"id": "51b12", "command": "player.addperk 51b12", "name": "Hunter's Discipline", "description": "Recover twice as many arrows from dead bodies"},
+      {"id": "58f63", "command": "player.addperk 58f63", "name": "Ranger", "description": "Able to move faster with a drawn bow"},
+      {"id": "58f61", "command": "player.addperk 58f61", "name": "Eagle Eye", "description": "Pressing Block while aiming will zoom in your view"},
+      {"id": "58f62", "command": "player.addperk 58f62", "name": "Power Shot", "description": "Arrows stagger all but the largest opponents 50% of the time"},
+      {"id": "105f19", "command": "player.addperk 105f19", "name": "Quick Shot", "description": "Can draw a bow 30% faster"},
+      {"id": "103ada", "command": "player.addperk 103ada", "name": "Steady Hand", "description": "Zooming in with a bow slows time by 25%"},
+      {"id": "103adb", "command": "player.addperk 103adb", "name": "Steady Hand", "description": "Zooming in with a bow slows time by 50%"},
+      {"id": "58f64", "command": "player.addperk 58f64", "name": "Bullseye", "description": "15% chance of paralyzing the target for a few seconds"}
+    ],
+    "blocking": [
+      {"id": "bccae", "command": "player.addperk bccae", "name": "Shield Wall", "description": "Blocking is 20% more effective"},
+      {"id": "79355", "command": "player.addperk 79355", "name": "Shield Wall", "description": "Blocking is 25% more effective"},
+      {"id": "79356", "command": "player.addperk 79356", "name": "Shield Wall", "description": "Blocking is 30% more effective"},
+      {"id": "79357", "command": "player.addperk 79357", "name": "Shield Wall", "description": "Blocking is 35% more effective"},
+      {"id": "79358", "command": "player.addperk 79358", "name": "Shield Wall", "description": "Blocking is 40% more effective"},
+      {"id": "58f68", "command": "player.addperk 58f68", "name": "Deflect Arrows", "description": "Arrows that hit the shield do no damage"},
+      {"id": "58f69", "command": "player.addperk 58f69", "name": "Elemental Protection", "description": "Blocking with a shield reduces incoming fire, frost, and shock damage by 50%"},
+      {"id": "106253", "command": "player.addperk 106253", "name": "Block Runner", "description": "Able to move faster with a shield raised"},
+      {"id": "58f67", "command": "player.addperk 58f67", "name": "Power Bash", "description": "Able to do a power bash"},
+      {"id": "5f594", "command": "player.addperk 5f594", "name": "Deadly Bash", "description": "Bashing does five times more damage"},
+      {"id": "58f66", "command": "player.addperk 58f66", "name": "Disarming Bash", "description": "Chance to disarm when power bashing"},
+      {"id": "58f6a", "command": "player.addperk 58f6a", "name": "Shield Charge", "description": "Sprinting with a shield raised knocks down most targets"},
+      {"id": "d8c33", "command": "player.addperk d8c33", "name": "Quick Reflexes", "description": "Time slows down if you are blocking during an enemy's power attack"}
+    ],
+    "conjuration": [
+      {"id": "f2ca7", "command": "player.addperk f2ca7", "name": "Novice Conjuration", "description": "Cast Novice level Conjuration spells for half magicka"},
+      {"id": "c44bb", "command": "player.addperk c44bb", "name": "Apprentice Conjuration", "description": "Cast Apprentice level Conjuration spells for half magicka"},
+      {"id": "c44bc", "command": "player.addperk c44bc", "name": "Adept Conjuration", "description": "Cast Adept level Conjuration spells for half magicka"},
+      {"id": "c44bd", "command": "player.addperk c44bd", "name": "Expert Conjuration", "description": "Cast Expert level Conjuration spells for half magicka"},
+      {"id": "c44be", "command": "player.addperk c44be", "name": "Master Conjuration", "description": "Cast Master level Conjuration spells for half magicka"},
+      {"id": "153ce", "command": "player.addperk 153ce", "name": "Conjuration Dual Casting", "description": "Dual casting a Conjuration spell overcharges the spell, allowing it to last longer"},
+      {"id": "640b3", "command": "player.addperk 640b3", "name": "Mystic Binding", "description": "Bound weapons do more damage"},
+      {"id": "d799e", "command": "player.addperk d799e", "name": "Soul Stealer", "description": "Bound weapons cast Soul Trap on targets"},
+      {"id": "d799c", "command": "player.addperk d799c", "name": "Oblivion Binding", "description": "Bound weapons will banish summoned creatures and turn raised ones"},
+      {"id": "581dd", "command": "player.addperk 581dd", "name": "Necromancy", "description": "Greater duration for reanimated undead"},
+      {"id": "581de", "command": "player.addperk 581de", "name": "Dark Souls", "description": "Reanimated undead have 100 points more health"},
+      {"id": "105f30", "command": "player.addperk 105f30", "name": "Summoner", "description": "Can summon atronachs or raise undead twice as far away"},
+      {"id": "105f31", "command": "player.addperk 105f31", "name": "Summoner", "description": "Can summon atronachs or raise undead three times as far away"},
+      {"id": "cb419", "command": "player.addperk cb419", "name": "Atromancy", "description": "Double duration for conjured Atronachs"},
+      {"id": "cb41a", "command": "player.addperk cb41a", "name": "Elemental Potency", "description": "Conjured Atronachs are 50% more powerful"},
+      {"id": "d5f1c", "command": "player.addperk d5f1c", "name": "Twin Souls", "description": "You can have two atronachs or reanimated zombies"}
+    ],
+    "destruction": [
+      {"id": "f2ca8", "command": "player.addperk f2ca8", "name": "Novice Destruction", "description": "Cast Novice level Destruction spells for half magicka"},
+      {"id": "c44bf", "command": "player.addperk c44bf", "name": "Apprentice Destruction", "description": "Cast Apprentice level Destruction spells for half magicka"},
+      {"id": "c44c0", "command": "player.addperk c44c0", "name": "Adept Destruction", "description": "Cast Adept level Destruction spells for half magicka"},
+      {"id": "c44c1", "command": "player.addperk c44c1", "name": "Expert Destruction", "description": "Cast Expert level Destruction spells for half magicka"},
+      {"id": "c44c2", "command": "player.addperk c44c2", "name": "Master Destruction", "description": "Cast Master level Destruction spells for half magicka"},
+      {"id": "105f32", "command": "player.addperk 105f32", "name": "Rune Master", "description": "Can place runes five times farther away"},
+      {"id": "581e7", "command": "player.addperk 581e7", "name": "Augmented Flames", "description": "Fire spells do 25% more damage"},
+      {"id": "10fcf8", "command": "player.addperk 10fcf8", "name": "Augmented Flames", "description": "Fire spells do 50% more damage"},
+      {"id": "f392e", "command": "player.addperk f392e", "name": "Intense Flames", "description": "Fire damage causes targets to flee if their health is low"},
+      {"id": "581ea", "command": "player.addperk 581ea", "name": "Augmented Frost", "description": "Frost spells do 25% more damage"},
+      {"id": "10fcf9", "command": "player.addperk 10fcf9", "name": "Augmented Frost", "description": "Frost spells do 50% more damage"},
+      {"id": "f3933", "command": "player.addperk f3933", "name": "Deep Freeze", "description": "Frost damage paralyzes targets if their health is low"},
+      {"id": "58200", "command": "player.addperk 58200", "name": "Augmented Shock", "description": "Shock spells do 25% more damage"},
+      {"id": "10fcfa", "command": "player.addperk 10fcfa", "name": "Augmented Shock", "description": "Shock spells do 50% more damage"},
+      {"id": "f3f0e", "command": "player.addperk f3f0e", "name": "Disintegrate", "description": "Shock damage disintegrates targets if their health is low"},
+      {"id": "153cf", "command": "player.addperk 153cf", "name": "Destruction Dual Casting", "description": "Dual casting a Destruction spell overcharges the effects into an even more powerful version"},
+      {"id": "153d2", "command": "player.addperk 153d2", "name": "Impact", "description": "Most destruction spells will stagger an opponent when dual cast"}
+    ],
+    "enchanting": [
+      {"id": "bee97", "command": "player.addperk bee97", "name": "Enchanter", "description": "New enchantments are 20% stronger"},
+      {"id": "c367c", "command": "player.addperk c367c", "name": "Enchanter", "description": "New enchantments are 40% stronger"},
+      {"id": "c367d", "command": "player.addperk c367d", "name": "Enchanter", "description": "New enchantments are 60% stronger"},
+      {"id": "c367e", "command": "player.addperk c367e", "name": "Enchanter", "description": "New enchantments are 80% stronger"},
+      {"id": "c367f", "command": "player.addperk c367f", "name": "Enchanter", "description": "New enchantments are 100% stronger"},
+      {"id": "58f80", "command": "player.addperk 58f80", "name": "Fire Enchanter", "description": "Fire enchantments on weapons and armor are 25% stronger"},
+      {"id": "58f81", "command": "player.addperk 58f81", "name": "Frost Enchanter", "description": "Frost enchantments on weapons and armor are 25% stronger"},
+      {"id": "58f82", "command": "player.addperk 58f82", "name": "Storm Enchanter", "description": "Shock enchantments on weapons and armor are 25% stronger"},
+      {"id": "58f7e", "command": "player.addperk 58f7e", "name": "Insightful Enchanter", "description": "Skill enchantments on armor are 25% stronger"},
+      {"id": "58f7d", "command": "player.addperk 58f7d", "name": "Corpus Enchanter", "description": "Health, magicka, and stamina enchantments on armor are 25% stronger"},
+      {"id": "58f7f", "command": "player.addperk 58f7f", "name": "Extra Effect", "description": "Can put two enchantments on the same item"},
+      {"id": "58f7c", "command": "player.addperk 58f7c", "name": "Soul Squeezer", "description": "Soul gems provide extra magicka for recharging"},
+      {"id": "108a44", "command": "player.addperk 108a44", "name": "Soul Siphon", "description": "Death blows to creatures, but not people, trap 5% of the victim's soul, recharging the weapon"}
+    ],
+    "heavy_armor": [
+      {"id": "bcd2a", "command": "player.addperk bcd2a", "name": "Juggernaut", "description": "Increases armor rating for Heavy Armor by 20%"},
+      {"id": "7935e", "command": "player.addperk 7935e", "name": "Juggernaut", "description": "Increases armor rating for Heavy Armor by 40%"},
+      {"id": "79361", "command": "player.addperk 79361", "name": "Juggernaut", "description": "Increases armor rating for Heavy Armor by 60%"},
+      {"id": "79362", "command": "player.addperk 79362", "name": "Juggernaut", "description": "Increases armor rating for Heavy Armor by 80%"},
+      {"id": "79374", "command": "player.addperk 79374", "name": "Juggernaut", "description": "Increases armor rating for Heavy Armor by 100%"},
+      {"id": "58f6e", "command": "player.addperk 58f6e", "name": "Fists of Steel", "description": "Unarmed attacks with Heavy Armor gauntlets do their armor rating in extra damage"},
+      {"id": "bcd2b", "command": "player.addperk bcd2b", "name": "Cushioned", "description": "Half damage from falling if wearing all Heavy Armor: head, chest, hands, feet"},
+      {"id": "58f6d", "command": "player.addperk 58f6d", "name": "Conditioning", "description": "Heavy Armor weighs nothing and doesn't slow you down when worn"},
+      {"id": "58f6f", "command": "player.addperk 58f6f", "name": "Well Fitted", "description": "25% Armor bonus if wearing all Heavy Armor: head, chest, hands, feet"},
+      {"id": "58f6c", "command": "player.addperk 58f6c", "name": "Tower of Strength", "description": "50% less stagger when wearing only Heavy Armor"},
+      {"id": "107832", "command": "player.addperk 107832", "name": "Matching Set", "description": "Additional 25% Armor bonus if wearing a matched set of Heavy Armor"},
+      {"id": "105f33", "command": "player.addperk 105f33", "name": "Reflect Blows", "description": "10% chance to reflect melee damage back to the enemy while wearing all Heavy Armor: head, chest, hands, feet"}
+    ],
+    "illusion": [
+      {"id": "f2ca9", "command": "player.addperk f2ca9", "name": "Novice Illusion", "description": "Cast Novice level Illusion spells for half magicka"},
+      {"id": "581e1", "command": "player.addperk 581e1", "name": "Animage", "description": "Illusion spells now work on higher level animals"},
+      {"id": "581e2", "command": "player.addperk 581e2", "name": "Kindred Mage", "description": "All Illusion spells work on higher level people"},
+      {"id": "581fd", "command": "player.addperk 581fd", "name": "Quiet Casting", "description": "All spells you cast from any school of magic are silent to others"},
+      {"id": "c44c3", "command": "player.addperk c44c3", "name": "Apprentice Illusion", "description": "Cast Apprentice level Illusion spells for half magicka"},
+      {"id": "c44c4", "command": "player.addperk c44c4", "name": "Adept Illusion", "description": "Cast Adept level Illusion spells for half magicka"},
+      {"id": "c44c5", "command": "player.addperk c44c5", "name": "Expert Illusion", "description": "Cast Expert level Illusion spells for half magicka"},
+      {"id": "c44c6", "command": "player.addperk c44c6", "name": "Master Illusion", "description": "Cast Master level Illusion spells for half magicka"},
+      {"id": "59b77", "command": "player.addperk 59b77", "name": "Hypnotic Gaze", "description": "Calm spells now work on higher level opponents. Cumulative with Kindred Mage and Animage"},
+      {"id": "59b78", "command": "player.addperk 59b78", "name": "Aspect of Terror", "description": "Fear spells work on higher level opponents. Cumulative with Kindred Mage and Animage"},
+      {"id": "c44b5", "command": "player.addperk c44b5", "name": "Rage", "description": "Frenzy spells work on higher level opponents. Cumulative with Kindred Mage and Animage"},
+      {"id": "59b76", "command": "player.addperk 59b76", "name": "Master of the Mind", "description": "Illusion spells work on undead, daedra and automatons"},
+      {"id": "153d0", "command": "player.addperk 153d0", "name": "Illusion Dual Casting", "description": "Dual casting an Illusion spell overcharges the effects into an even more powerful version"}
+    ],
+    "light_armor": [
+      {"id": "be123", "command": "player.addperk be123", "name": "Agile Defender", "description": "Increase armor rating for Light armor by 20%"},
+      {"id": "79376", "command": "player.addperk 79376", "name": "Agile Defender", "description": "Increase armor rating for Light armor by 40%"},
+      {"id": "79389", "command": "player.addperk 79389", "name": "Agile Defender", "description": "Increase armor rating for Light armor by 60%"},
+      {"id": "79391", "command": "player.addperk 79391", "name": "Agile Defender", "description": "Increase armor rating for Light armor by 80%"},
+      {"id": "79392", "command": "player.addperk 79392", "name": "Agile Defender", "description": "Increase armor rating for Light armor by 100%"},
+      {"id": "51b1b", "command": "player.addperk 51b1b", "name": "Custom Fit", "description": "25% Armor bonus if wearing all Light Armor: head, chest, hands, feet"},
+      {"id": "51b17", "command": "player.addperk 51b17", "name": "Matching Set", "description": "Additional 25% Armor bonus if wearing a matched set of Light Armor"},
+      {"id": "51b1c", "command": "player.addperk 51b1c", "name": "Unhindered", "description": "Light Armor weighs nothing and doesn't slow you down when worn"},
+      {"id": "105f22", "command": "player.addperk 105f22", "name": "Wind Walker", "description": "Stamina regenerates 50% faster in all Light Armor: head, chest, hands, feet"},
+      {"id": "107831", "command": "player.addperk 107831", "name": "Deft Movement", "description": "10% chance of avoiding all damage from a melee attack while wearing all Light Armor: head, chest, hands, feet"}
+    ],
+    "lockpicking": [
+      {"id": "f392a", "command": "player.addperk f392a", "name": "Novice Locks", "description": "Novice locks are much easier to pick"},
+      {"id": "be125", "command": "player.addperk be125", "name": "Apprentice Locks", "description": "Apprentice locks are much easier to pick"},
+      {"id": "106259", "command": "player.addperk 106259", "name": "Quick Hands", "description": "Able to pick locks without being noticed"},
+      {"id": "107830", "command": "player.addperk 107830", "name": "Wax Key", "description": "Automatically gives you a copy of a picked lock's key if it has one"},
+      {"id": "c3680", "command": "player.addperk c3680", "name": "Adept Locks", "description": "Adept locks are much easier to pick"},
+      {"id": "c3681", "command": "player.addperk c3681", "name": "Expert Locks", "description": "Expert locks are much easier to pick"},
+      {"id": "5820a", "command": "player.addperk 5820a", "name": "Golden Touch", "description": "Find more gold in chests"},
+      {"id": "105f26", "command": "player.addperk 105f26", "name": "Treasure Hunter", "description": "50% greater chance of finding special treasure"},
+      {"id": "58208", "command": "player.addperk 58208", "name": "Locksmith", "description": "Pick starts close to the lock opening position"},
+      {"id": "58209", "command": "player.addperk 58209", "name": "Unbreakable", "description": "Lockpicks never break"},
+      {"id": "c3682", "command": "player.addperk c3682", "name": "Master Locks", "description": "Master locks are much easier to pick"}
+    ],
+    "one_handed": [
+      {"id": "babe4", "command": "player.addperk babe4", "name": "Armsman", "description": "One-Handed weapons do 20% more damage"},
+      {"id": "79343", "command": "player.addperk 79343", "name": "Armsman", "description": "One-Handed weapons do 40% more damage"},
+      {"id": "79342", "command": "player.addperk 79342", "name": "Armsman", "description": "One-Handed weapons do 60% more damage"},
+      {"id": "79344", "command": "player.addperk 79344", "name": "Armsman", "description": "One-Handed weapons do 80% more damage"},
+      {"id": "79345", "command": "player.addperk 79345", "name": "Armsman", "description": "One-Handed weapons do twice as much damage"},
+      {"id": "5f56f", "command": "player.addperk 5f56f", "name": "Bladesman", "description": "Attacks with swords have a 10% chance of doing critical damage"},
+      {"id": "c1e90", "command": "player.addperk c1e90", "name": "Bladesman", "description": "Attacks with swords have a 15% chance of doing more critical damage"},
+      {"id": "c1e91", "command": "player.addperk c1e91", "name": "Bladesman", "description": "Attacks with a swords have a 20% chance of doing even more critical damage"},
+      {"id": "5f592", "command": "player.addperk 5f592", "name": "Bone Breaker", "description": "Attacks with maces ignore 25% of armor"},
+      {"id": "c1e92", "command": "player.addperk c1e92", "name": "Bone Breaker", "description": "Attacks with maces ignore 50% of armor"},
+      {"id": "c1e93", "command": "player.addperk c1e93", "name": "Bone Breaker", "description": "Attacks with maces ignore 75% of armor"},
+      {"id": "106256", "command": "player.addperk 106256", "name": "Dual Flurry", "description": "Dual wielding attacks are 20% faster"},
+      {"id": "106257", "command": "player.addperk 106257", "name": "Dual Flurry", "description": "Dual wielding attacks are 35% faster"},
+      {"id": "106258", "command": "player.addperk 106258", "name": "Dual Savagery", "description": "Dual wielding power attacks do 50% bonus damage"},
+      {"id": "52d50", "command": "player.addperk 52d50", "name": "Fighting Stance", "description": "Power attacks with one-handed weapons cost 25% less stamina"},
+      {"id": "cb406", "command": "player.addperk cb406", "name": "Critical Charge", "description": "Can do a one-handed power attack while sprinting that does double critical damage"},
+      {"id": "3af81", "command": "player.addperk 3af81", "name": "Savage Strike", "description": "Standing power attacks do 25% bonus damage with a chance to decapitate your enemies"},
+      {"id": "3afa6", "command": "player.addperk 3afa6", "name": "Paralyzing Strike", "description": "Backwards power attack has a 25% chance to paralyze the target"},
+      {"id": "3fffa", "command": "player.addperk 3fffa", "name": "Hack and Slash", "description": "Attacks with war axes cause extra bleeding damage"},
+      {"id": "c3678", "command": "player.addperk c3678", "name": "Hack and Slash", "description": "Attacks with war axes cause more bleeding damage"},
+      {"id": "c3679", "command": "player.addperk c3679", "name": "Hack and Slash", "description": "Attacks with war axes cause even more bleeding damage"}
+    ],
+    "pickpocket": [
+      {"id": "be124", "command": "player.addperk be124", "name": "Light Fingers", "description": "Pickpocketing bonus of 20%. Item weight and value reduce pickpocketing odds"},
+      {"id": "18e6a", "command": "player.addperk 18e6a", "name": "Light Fingers", "description": "Pickpocketing bonus of 40%. Item weight and value reduce pickpocketing odds"},
+      {"id": "18e6b", "command": "player.addperk 18e6b", "name": "Light Fingers", "description": "Pickpocketing bonus of 60%. Item weight and value reduce pickpocketing odds"},
+      {"id": "18e6c", "command": "player.addperk 18e6c", "name": "Light Fingers", "description": "Pickpocketing bonus of 80%. Item weight and value reduce pickpocketing odds"},
+      {"id": "18e6d", "command": "player.addperk 18e6d", "name": "Light Fingers", "description": "Pickpocketing bonus of 100%. Item weight and value reduce pickpocketing odds"},
+      {"id": "58202", "command": "player.addperk 58202", "name": "Night Thief", "description": "+25% chance to pickpocket if the target is asleep"},
+      {"id": "58204", "command": "player.addperk 58204", "name": "Cutpurse", "description": "Pickpocketing gold is 50% easier"},
+      {"id": "d79a0", "command": "player.addperk d79a0", "name": "Keymaster", "description": "Pickpocketing keys almost always works"},
+      {"id": "58201", "command": "player.addperk 58201", "name": "Misdirection", "description": "Can pickpocket equipped weapons"},
+      {"id": "58205", "command": "player.addperk 58205", "name": "Perfect Touch", "description": "Can pickpocket equipped items"},
+      {"id": "96590", "command": "player.addperk 96590", "name": "Extra Pockets", "description": "Carrying capacity is increased by 100"},
+      {"id": "105f28", "command": "player.addperk 105f28", "name": "Poisoned", "description": "Silently harm enemies by placing poisons in their pockets"}
+    ],
+    "restoration": [
+      {"id": "f2caa", "command": "player.addperk f2caa", "name": "Novice Restoration", "description": "Cast Novice level Restoration spells for half magicka"},
+      {"id": "c44c7", "command": "player.addperk c44c7", "name": "Apprentice Restoration", "description": "Cast Apprentice level Restoration spells for half magicka"},
+      {"id": "c44c8", "command": "player.addperk c44c8", "name": "Adept Restoration", "description": "Cast Adept level Restoration spells for half magicka"},
+      {"id": "c44c9", "command": "player.addperk c44c9", "name": "Expert Restoration", "description": "Cast Expert level Restoration spells for half magicka"},
+      {"id": "c44ca", "command": "player.addperk c44ca", "name": "Master Restoration", "description": "Cast Master level Restoration spells for half magicka"},
+      {"id": "581f4", "command": "player.addperk 581f4", "name": "Recovery", "description": "Magicka regenerates 25% faster"},
+      {"id": "581f5", "command": "player.addperk 581f5", "name": "Recovery", "description": "Magicka regenerates 50% faster"},
+      {"id": "a3f64", "command": "player.addperk a3f64", "name": "Avoid Death", "description": "Once a day, heals 250 points automatically if you fall below 10% health"},
+      {"id": "581f8", "command": "player.addperk 581f8", "name": "Regeneration", "description": "Healing spells cure 50% more"},
+      {"id": "581e4", "command": "player.addperk 581e4", "name": "Necromage", "description": "All spells are more effective against undead"},
+      {"id": "581f9", "command": "player.addperk 581f9", "name": "Respite", "description": "Healing spells also restore Stamina"},
+      {"id": "153d1", "command": "player.addperk 153d1", "name": "Restoration Dual Casting", "description": "Dual casting a Restoration spell overcharges the effects into an even more powerful version"},
+      {"id": "68bcc", "command": "player.addperk 68bcc", "name": "Ward Absorb", "description": "Wards recharge your magicka when hit with spells"}
+    ],
+    "smithing": [
+      {"id": "cb40d", "command": "player.addperk cb40d", "name": "Steel Smithing", "description": "Can create Steel armor and weapons at forges, and improve them twice as much"},
+      {"id": "5218e", "command": "player.addperk 5218e", "name": "Arcane Blacksmith", "description": "You can improve magical weapons and armor"},
+      {"id": "cb40e", "command": "player.addperk cb40e", "name": "Dwarven Smithing", "description": "Can create Dwarven armor and weapons at forges, and improve them twice as much"},
+      {"id": "cb410", "command": "player.addperk cb410", "name": "Orcish Smithing", "description": "Can create Orcish armor and weapons at forges, and improve them twice as much"},
+      {"id": "cb412", "command": "player.addperk cb412", "name": "Ebony Smithing", "description": "Can create Ebony armor and weapons at forges, and improve them twice as much"},
+      {"id": "cb413", "command": "player.addperk cb413", "name": "Daedric Smithing", "description": "Can create Daedric armor and weapons at forges, and improve them twice as much"},
+      {"id": "cb40f", "command": "player.addperk cb40f", "name": "Elven Smithing", "description": "Can create Elven armor and weapons at forges, and improve them twice as much"},
+      {"id": "cb414", "command": "player.addperk cb414", "name": "Advanced Armors", "description": "Can create Scaled and Plate armor at forges, and improve them twice as much"},
+      {"id": "cb411", "command": "player.addperk cb411", "name": "Glass Smithing", "description": "Can create Glass armor and weapons at forges, and improve them twice as much"},
+      {"id": "52190", "command": "player.addperk 52190", "name": "Dragon Armor", "description": "Can create Dragon armor at forges, and improve them twice as much"}
+    ],
+    "sneak": [
+      {"id": "be126", "command": "player.addperk be126", "name": "Stealth", "description": "You are 20% harder to detect when sneaking"},
+      {"id": "c07c6", "command": "player.addperk c07c6", "name": "Stealth", "description": "You are 25% harder to detect when sneaking"},
+      {"id": "c07c7", "command": "player.addperk c07c7", "name": "Stealth", "description": "You are 30% harder to detect when sneaking"},
+      {"id": "c07c8", "command": "player.addperk c07c8", "name": "Stealth", "description": "You are 35% harder to detect when sneaking"},
+      {"id": "c07c9", "command": "player.addperk c07c9", "name": "Stealth", "description": "You are 40% harder to detect when sneaking"},
+      {"id": "58210", "command": "player.addperk 58210", "name": "Backstab", "description": "Sneak attacks with one-handed weapons now do six times damage"},
+      {"id": "1036f0", "command": "player.addperk 1036f0", "name": "Deadly Aim", "description": "Sneak attacks with bows now do three times damage"},
+      {"id": "58211", "command": "player.addperk 58211", "name": "Assassin's Blade", "description": "Sneak attacks with daggers now do a total of fifteen times normal damage"},
+      {"id": "58213", "command": "player.addperk 58213", "name": "Muffled Movement", "description": "Noise from armor is reduced 50%"},
+      {"id": "5820c", "command": "player.addperk 5820c", "name": "Light Foot", "description": "You won't trigger pressure plates"},
+      {"id": "105f23", "command": "player.addperk 105f23", "name": "Silent Roll", "description": "Sprinting while sneaking executes a silent forward roll"},
+      {"id": "105f24", "command": "player.addperk 105f24", "name": "Silence", "description": "Walking and running does not affect detection"},
+      {"id": "58214", "command": "player.addperk 58214", "name": "Shadow Warrior", "description": "Crouching stops combat for a moment and forces distant opponents to search for a target"}
+    ],
+    "speech": [
+      {"id": "be128", "command": "player.addperk be128", "name": "Haggling", "description": "Buying and selling prices are 10% better"},
+      {"id": "c07ce", "command": "player.addperk c07ce", "name": "Haggling", "description": "Buying and selling prices are 15% better"},
+      {"id": "c07cf", "command": "player.addperk c07cf", "name": "Haggling", "description": "Buying and selling prices are 20% better"},
+      {"id": "c07d0", "command": "player.addperk c07d0", "name": "Haggling", "description": "Buying and selling prices are 25% better"},
+      {"id": "c07d1", "command": "player.addperk c07d1", "name": "Haggling", "description": "Buying and selling prices are 30% better"},
+      {"id": "58f75", "command": "player.addperk 58f75", "name": "Allure", "description": "10% better prices with the opposite sex"},
+      {"id": "58f7a", "command": "player.addperk 58f7a", "name": "Merchant", "description": "Can sell any type of item to any kind of merchant"},
+      {"id": "58f7b", "command": "player.addperk 58f7b", "name": "Investor", "description": "Can invest 500 gold with a shopkeeper to increase his available gold permanently"},
+      {"id": "58f79", "command": "player.addperk 58f79", "name": "Fence", "description": "Can barter stolen goods with any merchant you have invested in"},
+      {"id": "1090a5", "command": "player.addperk 1090a5", "name": "Master Trader", "description": "Every merchant in the world gains 1000 gold for bartering"},
+      {"id": "1090a4", "command": "player.addperk 1090a4", "name": "Bribery", "description": "Can bribe guards to ignore crimes"},
+      {"id": "1090a2", "command": "player.addperk 1090a2", "name": "Persuasion", "description": "Persuasion attempts are 30% easier"},
+      {"id": "105f29", "command": "player.addperk 105f29", "name": "Intimidation", "description": "Intimidation is twice as successful"}
+    ],
+    "two_handed": [
+      {"id": "babe8", "command": "player.addperk babe8", "name": "Barbarian", "description": "Two-Handed weapons do 20% more damage"},
+      {"id": "79346", "command": "player.addperk 79346", "name": "Barbarian", "description": "Two-Handed weapons do 40% more damage"},
+      {"id": "79347", "command": "player.addperk 79347", "name": "Barbarian", "description": "Two-Handed weapons do 60% more damage"},
+      {"id": "79348", "command": "player.addperk 79348", "name": "Barbarian", "description": "Two-Handed weapons do 80% more damage"},
+      {"id": "79349", "command": "player.addperk 79349", "name": "Barbarian", "description": "Two-Handed weapons do twice as much damage"},
+      {"id": "52d51", "command": "player.addperk 52d51", "name": "Champion's Stance", "description": "Power attacks with two-handed weapons cost 25% less stamina"},
+      {"id": "52d52", "command": "player.addperk 52d52", "name": "Devastating Blow", "description": "Standing power attacks do 25% bonus damage with a chance to decapitate your enemies"},
+      {"id": "cb407", "command": "player.addperk cb407", "name": "Great Critical Charge", "description": "Can do a two-handed power attack while sprinting that does double critical damage"},
+      {"id": "3af9e", "command": "player.addperk 3af9e", "name": "Sweep", "description": "Sideways power attacks with two-handed weapons hit all targets in front of you"},
+      {"id": "3afa7", "command": "player.addperk 3afa7", "name": "Warmaster", "description": "Backwards power attack has a 25% chance to paralyze the target"},
+      {"id": "3af83", "command": "player.addperk 3af83", "name": "Deep Wounds", "description": "Attacks with greatswords have a 10% chance of doing critical damage"},
+      {"id": "c1e94", "command": "player.addperk c1e94", "name": "Deep Wounds", "description": "Attacks with greatswords have a 15% chance of doing more critical damage"},
+      {"id": "c1e95", "command": "player.addperk c1e95", "name": "Deep Wounds", "description": "Attacks with greatswords have a 20% chance of doing even more critical damage"},
+      {"id": "c5c05", "command": "player.addperk c5c05", "name": "Limbsplitter", "description": "Attacks with battle axes cause extra bleeding damage"},
+      {"id": "c5c06", "command": "player.addperk c5c06", "name": "Limbsplitter", "description": "Attacks with battle axes cause more bleeding damage"},
+      {"id": "c5c07", "command": "player.addperk c5c07", "name": "Limbsplitter", "description": "Attacks with battle axes cause even more bleeding damage"},
+      {"id": "3af84", "command": "player.addperk 3af84", "name": "Skullcrusher", "description": "Attacks with warhammers ignore 25% of armor"},
+      {"id": "c1e96", "command": "player.addperk c1e96", "name": "Skullcrusher", "description": "Attacks with warhammers ignore 50% of armor"},
+      {"id": "c1e97", "command": "player.addperk c1e97", "name": "Skullcrusher", "description": "Attacks with warhammers ignore 75% of armor"}
+    ]
+  },
+  "dragon_shouts": {
+    "animal_allegiance": [
+      {"word": "RAAN", "id": "60291", "command": "player.teachword 60291", "translation": "Animal"},
+      {"word": "MIR", "id": "60292", "command": "player.teachword 60292", "translation": "Allegiance"},
+      {"word": "TAH", "id": "60293", "command": "player.teachword 60293", "translation": "Pack"}
+    ],
+    "aura_whisper": [
+      {"word": "LAAS", "id": "60294", "command": "player.teachword 60294", "translation": "Life"},
+      {"word": "YA", "id": "60295", "command": "player.teachword 60295", "translation": "Seek"},
+      {"word": "NIR", "id": "60296", "command": "player.teachword 60296", "translation": "Hunt"}
+    ],
+    "become_ethereal": [
+      {"word": "FIN", "id": "32917", "command": "player.teachword 32917", "translation": "Fade"},
+      {"word": "ZI", "id": "32918", "command": "player.teachword 32918", "translation": "Spirit"},
+      {"word": "GRON", "id": "32919", "command": "player.teachword 32919", "translation": "Bind"}
+    ],
+    "call_dragon": [
+      {"word": "OD", "id": "46B89", "command": "player.teachword 46B89", "translation": "Snow"},
+      {"word": "AH", "id": "46B8A", "command": "player.teachword 46B8A", "translation": "Hunter"},
+      {"word": "VIING", "id": "46B8B", "command": "player.teachword 46B8B", "translation": "Wing"}
+    ],
+    "call_of_valor": [
+      {"word": "HUN", "id": "51960", "command": "player.teachword 51960", "translation": "Hero"},
+      {"word": "KAAR", "id": "51961", "command": "player.teachword 51961", "translation": "Champion"},
+      {"word": "ZOOL", "id": "51962", "command": "player.teachword 51962", "translation": "Legend"}
+    ],
+    "clear_skies": [
+      {"word": "LOK", "id": "3CD31", "command": "player.teachword 3CD31", "translation": "Sky"},
+      {"word": "VAH", "id": "3CD32", "command": "player.teachword 3CD32", "translation": "Spring"},
+      {"word": "KOOR", "id": "3CD33", "command": "player.teachword 3CD33", "translation": "Summer"}
+    ],
+    "disarm": [
+      {"word": "ZUN", "id": "5FB95", "command": "player.teachword 5FB95", "translation": "Weapon"},
+      {"word": "HAAL", "id": "5FB96", "command": "player.teachword 5FB96", "translation": "Hoof"},
+      {"word": "VIIK", "id": "5FB97", "command": "player.teachword 5FB97", "translation": "Defeat"}
+    ],
+    "dismaying_shout": [
+      {"word": "FAAS", "id": "3291A", "command": "player.teachword 3291A", "translation": "Fear"},
+      {"word": "RU", "id": "3291B", "command": "player.teachword 3291B", "translation": "Run"},
+      {"word": "MAAR", "id": "3291C", "command": "player.teachword 3291C", "translation": "Terror"}
+    ],
+    "dragonrend": [
+      {"word": "JOOR", "id": "44251", "command": "player.teachword 44251", "translation": "Mortal"},
+      {"word": "ZAH", "id": "44252", "command": "player.teachword 44252", "translation": "Finite"},
+      {"word": "FRUL", "id": "44253", "command": "player.teachword 44253", "translation": "Temporary"}
+    ],
+    "elemental_fury": [
+      {"word": "SU", "id": "3291D", "command": "player.teachword 3291D", "translation": "Air"},
+      {"word": "GRAH", "id": "3291E", "command": "player.teachword 3291E", "translation": "Battle"},
+      {"word": "DUN", "id": "3291F", "command": "player.teachword 3291F", "translation": "Fury"}
+    ],
+    "fire_breath": [
+      {"word": "YOL", "id": "20E17", "command": "player.teachword 20E17", "translation": "Fire"},
+      {"word": "TOOR", "id": "20E18", "command": "player.teachword 20E18", "translation": "Inferno"},
+      {"word": "KREIN", "id": "20E19", "command": "player.teachword 20E19", "translation": "Sun"}
+    ],
+    "frost_breath": [
+      {"word": "FO", "id": "5D16C", "command": "player.teachword 5D16C", "translation": "empty"},
+      {"word": "KRAH", "id": "5D16D", "command": "player.teachword 5D16D", "translation": "empty"},
+      {"word": "ZUN", "id": "5D16E", "command": "player.teachword 5D16E", "translation": "empty"}
+    ],
+    "ice_form": [
+      {"word": "IIZ", "id": "602A3", "command": "player.teachword 602A3", "translation": "Ice"},
+      {"word": "SLEN", "id": "602A4", "command": "player.teachword 602A4", "translation": "Flesh"},
+      {"word": "NUS", "id": "602A5", "command": "player.teachword 602A5", "translation": "Statue"}
+    ],
+    "kynes_peace": [
+      {"word": "KAAN", "id": "6029D", "command": "player.teachword 6029D", "translation": "Kyne"},
+      {"word": "DREM", "id": "6029E", "command": "player.teachword 6029E", "translation": "Peace"},
+      {"word": "OV", "id": "6029F", "command": "player.teachword 6029F", "translation": "Trust"}
+    ],
+    "marked_for_death": [
+      {"word": "KRII", "id": "60297", "command": "player.teachword 60297", "translation": "Kill"},
+      {"word": "LUN", "id": "60298", "command": "player.teachword 60298", "translation": "Leech"},
+      {"word": "AUS", "id": "60299", "command": "player.teachword 60299", "translation": "Suffer"}
+    ],
+    "slow_time": [
+      {"word": "TIID", "id": "48ACA", "command": "player.teachword 48ACA", "translation": "Time"},
+      {"word": "KLO", "id": "48ACB", "command": "player.teachword 48ACB", "translation": "Sand"},
+      {"word": "UL", "id": "48ACC", "command": "player.teachword 48ACC", "translation": "Eternity"}
+    ],
+    "storm_call": [
+      {"word": "STRUN", "id": "6029A", "command": "player.teachword 6029A", "translation": "Storm"},
+      {"word": "BAH", "id": "6029B", "command": "player.teachword 6029B", "translation": "Wrath"},
+      {"word": "QO", "id": "6029C", "command": "player.teachword 6029C", "translation": "Lightning"}
+    ],
+    "throw_voice": [
+      {"word": "ZUL", "id": "602A0", "command": "player.teachword 602A0", "translation": "Voice"},
+      {"word": "MEY", "id": "602A1", "command": "player.teachword 602A1", "translation": "Foul"},
+      {"word": "GUT", "id": "602A2", "command": "player.teachword 602A2", "translation": "Far"}
+    ],
+    "unrelenting_force": [
+      {"word": "FUS", "id": "13E22", "command": "player.teachword 13E22", "translation": "Force"},
+      {"word": "RO", "id": "13E23", "command": "player.teachword 13E23", "translation": "Balance"},
+      {"word": "DAH", "id": "13E24", "command": "player.teachword 13E24", "translation": "Push"}
+    ],
+    "whirlwind_sprint": [
+      {"word": "WULD", "id": "2F7BB", "command": "player.teachword 2F7BB", "translation": "Whirlwind"},
+      {"word": "NAH", "id": "2F7BC", "command": "player.teachword 2F7BC", "translation": "Fury"},
+      {"word": "KEST", "id": "2F7BD", "command": "player.teachword 2F7BD", "translation": "Tempest"}
+    ]
+  },
+  "item_commands": {
+    "additem": {
+      "command": "player.additem <Item-ID> <#>",
+      "description": "Receive # amount of Item"
+    },
+    "placeatme": {
+      "command": "player.placeatme #",
+      "description": "Places a item/mob/npc at your location"
+    },
+    "showinventory": {
+      "command": "player.showinventory",
+      "description": "Lists current player inventory contents and ids"
+    }
+  },
+  "basic_items": {
+    "gold": {"id": "f", "command": "player.additem f 1000", "name": "Gold"},
+    "lockpick": {"id": "a", "command": "player.additem a 1", "name": "Lockpick"},
+    "ultimate_healing_potion": {"id": "39be5", "command": "player.additem 39be5 1", "name": "Ultimate Healing Potion"}
+  },
+  "weapons": {
+    "unique": [
+      {"id": "f8318", "name": "Chillrend", "command": "player.additem f8318 1"},
+      {"id": "f71d0", "name": "Dragonbane", "command": "player.additem f71d0 1"},
+      {"id": "f5d1d", "name": "Gauldur Blackblade", "command": "player.additem f5d1d 1"},
+      {"id": "f5d22", "name": "Gauldur Blackbow", "command": "player.additem f5d22 1"},
+      {"id": "f6527", "name": "Nightingale Blade", "command": "player.additem f6527 1"},
+      {"id": "f652c", "name": "Nightingale Bow", "command": "player.additem f652c 1"},
+      {"id": "f5d2d", "name": "The Pale Blade", "command": "player.additem f5d2d 1"},
+      {"id": "9ccdc", "name": "Blade of Woe", "command": "player.additem 9ccdc 1"},
+      {"id": "4a38f", "name": "Ebony Blade", "command": "player.additem 4a38f 1"},
+      {"id": "233e3", "name": "Mace of Molag Bal", "command": "player.additem 233e3 1"},
+      {"id": "240d2", "name": "Mehrunes' Razor", "command": "player.additem 240d2 1"},
+      {"id": "1c4e6", "name": "The Rueful Axe", "command": "player.additem 1c4e6 1"},
+      {"id": "1cb36", "name": "Sanguine Rose", "command": "player.additem 1cb36 1"},
+      {"id": "35066", "name": "Skull of Corruption", "command": "player.additem 35066 1"},
+      {"id": "35369", "name": "Staff of Magnus", "command": "player.additem 35369 1"},
+      {"id": "2acd2", "name": "Volendrung", "command": "player.additem 2acd2 1"},
+      {"id": "2ac6f", "name": "Wabbajack", "command": "player.additem 2ac6f 1"}
+    ],
+    "daedric": [
+      {"id": "139b8", "name": "Daedric Mace (plain)", "command": "player.additem 139b8 1"},
+      {"id": "28dea", "name": "Daedric Mace of the Inferno", "command": "player.additem 28dea 1"},
+      {"id": "28df7", "name": "Daedric Mace of Storms", "command": "player.additem 28df7 1"},
+      {"id": "139b9", "name": "Daedric Sword (plain)", "command": "player.additem 139b9 1"},
+      {"id": "28e96", "name": "Daedric Sword of the Inferno", "command": "player.additem 28e96 1"},
+      {"id": "28fec", "name": "Daedric Sword of Storms", "command": "player.additem 28fec 1"},
+      {"id": "139b5", "name": "Daedric Bow (plain)", "command": "player.additem 139b5 1"},
+      {"id": "1dfe6", "name": "Daedric Bow of the Inferno", "command": "player.additem 1dfe6 1"},
+      {"id": "1dff2", "name": "Daedric Bow of Storms", "command": "player.additem 1dff2 1"},
+      {"id": "139c0", "name": "Daedric Arrow", "command": "player.additem 139c0 1"}
+    ]
+  },
+  "armor": {
+    "dragonscale_light": [
+      {"id": "13940", "name": "Dragonscale Helmet (plain)", "command": "player.additem 13940 1"},
+      {"id": "d7a08", "name": "Dragonscale Helmet of Peerless Magicka", "command": "player.additem d7a08 1"},
+      {"id": "d7a0b", "name": "Dragonscale Helmet of Peerless Archery", "command": "player.additem d7a0b 1"},
+      {"id": "1393e", "name": "Dragonscale Armor (plain)", "command": "player.additem 1393e 1"},
+      {"id": "fe2e5", "name": "Dragonscale Armor of Renewal", "command": "player.additem fe2e5 1"},
+      {"id": "d79bc", "name": "Dragonscale Armor of Peerless Health", "command": "player.additem d79bc 1"},
+      {"id": "1393f", "name": "Dragonscale Gauntlets (plain)", "command": "player.additem 1393f 1"},
+      {"id": "d79f3", "name": "Dragonscale Gauntlets of Peerless Sure Grip", "command": "player.additem d79f3 1"},
+      {"id": "d79ea", "name": "Dragonscale Gauntlets of Peerless Wielding", "command": "player.additem d79ea 1"},
+      {"id": "d79e7", "name": "Dragonscale Gauntlets of Peerless Archery", "command": "player.additem d79e7 1"},
+      {"id": "1393d", "name": "Dragonscale Boots (plain)", "command": "player.additem 1393d 1"},
+      {"id": "d79b3", "name": "Dragonscale Boots of Grounding", "command": "player.additem d79b3 1"},
+      {"id": "d79a9", "name": "Dragonscale Boots of the Mammoth", "command": "player.additem d79a9 1"},
+      {"id": "fda06", "name": "Dragonscale Boots of Peerless Sneaking", "command": "player.additem fda06 1"}
+    ],
+    "daedric_heavy": [
+      {"id": "1396d", "name": "Daedric Helm (plain)", "command": "player.additem 1396d 1"},
+      {"id": "d7ae6", "name": "Daedric Helm of Peerless Magicka", "command": "player.additem d7ae6 1"},
+      {"id": "d7ae9", "name": "Daedric Helm of Peerless Archery", "command": "player.additem d7ae9 1"},
+      {"id": "61cd6", "name": "Konahrik (chance to heal on low hp & damage nearby enemies)", "command": "player.additem 61cd6 1"},
+      {"id": "1396b", "name": "Daedric Armor (plain)", "command": "player.additem 1396b 1"},
+      {"id": "fe2fd1", "name": "Daedric Armor of Renewal", "command": "player.additem fe2fd1 1"},
+      {"id": "10cf38", "name": "Daedric Armor of Peerless Destruction", "command": "player.additem 10cf38 1"},
+      {"id": "1396c", "name": "Daedric Gauntlets (plain)", "command": "player.additem 1396c 1"},
+      {"id": "d7ac5", "name": "Daedric Gauntlets of Peerless Archery", "command": "player.additem d7ac5 1"},
+      {"id": "d7ac8", "name": "Daedric Gauntlets of Peerless Wielding", "command": "player.additem d7ac8 1"},
+      {"id": "d7ad1", "name": "Daedric Gauntlets of Peerless Sure Grip", "command": "player.additem d7ad1 1"},
+      {"id": "1396a", "name": "Daedric Boots (plain)", "command": "player.additem 1396a 1"},
+      {"id": "d7a94", "name": "Daedric Boots of Grounding", "command": "player.additem d7a94 1"},
+      {"id": "d7a8b", "name": "Daedric Boots of Muffling", "command": "player.additem d7a8b 1"}
+    ]
+  },
+  "jewelry": [
+    {"id": "fc067", "name": "Necklace of Waterbreathing", "command": "player.additem fc067 1"},
+    {"id": "ff7d7", "name": "Ring of Peerless Magicka", "command": "player.additem ff7d7 1"},
+    {"id": "cc846", "name": "Amulet of Talos (-20% cd on shouts)", "command": "player.additem cc846 1"},
+    {"id": "877cb", "name": "Gold Sapphire Ring (plain)", "command": "player.additem 877cb 1"},
+    {"id": "877c9", "name": "Gold Diamond Ring (plain)", "command": "player.additem 877c9 1"},
+    {"id": "877f1", "name": "Gold Diamond Necklace (plain)", "command": "player.additem 877f1 1"}
+  ],
+  "ingots": [
+    {"id": "5ace3", "name": "Silver Ingot", "command": "player.additem 5ace3 1"},
+    {"id": "5ace4", "name": "Iron Ingot", "command": "player.additem 5ace4 1"},
+    {"id": "5ace5", "name": "Steel Ingot", "command": "player.additem 5ace5 1"},
+    {"id": "5ad93", "name": "Corundum Ingot", "command": "player.additem 5ad93 1"},
+    {"id": "5ad99", "name": "Orichalcum Ingot", "command": "player.additem 5ad99 1"},
+    {"id": "5ad9d", "name": "Ebony Ingot", "command": "player.additem 5ad9d 1"},
+    {"id": "5ad9e", "name": "Gold Ingot", "command": "player.additem 5ad9e 1"},
+    {"id": "5ada0", "name": "Quicksilver Ingot", "command": "player.additem 5ada0 1"},
+    {"id": "db8a2", "name": "Dwarven Metal Ingot", "command": "player.additem db8a2 1"}
+  ],
+  "crafting_parts": [
+    {"id": "3ada3", "name": "Dragon Scales", "command": "player.additem 3ada3 1"},
+    {"id": "3ada4", "name": "Dragon Bone", "command": "player.additem 3ada4 1"},
+    {"id": "3ad5b", "name": "Daedra Heart", "command": "player.additem 3ad5b 1"},
+    {"id": "db5d2", "name": "Leather", "command": "player.additem db5d2 1"},
+    {"id": "800e4", "name": "Leather Strips", "command": "player.additem 800e4 1"}
+  ],
+  "soul_gems": [
+    {"id": "2e4e3", "name": "Petty Soul Gem", "command": "player.additem 2e4e3 1"},
+    {"id": "2e4e5", "name": "Lesser Soul Gem", "command": "player.additem 2e4e5 1"},
+    {"id": "2e4f3", "name": "Common Soul Gem", "command": "player.additem 2e4f3 1"},
+    {"id": "2e4fb", "name": "Greater Soul Gem", "command": "player.additem 2e4fb 1"},
+    {"id": "2e4ff", "name": "Grand Soul Gem", "command": "player.additem 2e4ff 1"},
+    {"id": "2e504", "name": "Black Soul Gem", "command": "player.additem 2e504 1"},
+    {"id": "63b27", "name": "Azura's Star", "command": "player.additem 63b27 1"},
+    {"id": "63b29", "name": "The Black Star", "command": "player.additem 63b29 1"}
+  ],
+  "spell_tomes": [
+    {"id": "9CD51", "name": "Spell Tome: Flames", "command": "player.additem 9CD51 1"},
+    {"id": "9CD52", "name": "Spell Tome: Frostbite", "command": "player.additem 9CD52 1"},
+    {"id": "9CD53", "name": "Spell Tome: Sparks", "command": "player.additem 9CD53 1"},
+    {"id": "9CD54", "name": "Spell Tome: Soul Trap", "command": "player.additem 9CD54 1"},
+    {"id": "9E2A7", "name": "Spell Tome: Candlelight", "command": "player.additem 9E2A7 1"},
+    {"id": "9E2A8", "name": "Spell Tome: Oakflesh", "command": "player.additem 9E2A8 1"},
+    {"id": "9E2A9", "name": "Spell Tome: Bound Sword", "command": "player.additem 9E2A9 1"},
+    {"id": "9E2AA", "name": "Spell Tome: Raise Zombie", "command": "player.additem 9E2AA 1"},
+    {"id": "9E2AB", "name": "Spell Tome: Conjure Familiar", "command": "player.additem 9E2AB 1"},
+    {"id": "9E2AC", "name": "Spell Tome: Fury", "command": "player.additem 9E2AC 1"},
+    {"id": "9E2AD", "name": "Spell Tome: Courage", "command": "player.additem 9E2AD 1"},
+    {"id": "9E2AE", "name": "Spell Tome: Lesser Ward", "command": "player.additem 9E2AE 1"},
+    {"id": "9E2AF", "name": "Spell Tome: Healing", "command": "player.additem 9E2AF 1"},
+    {"id": "A26E2", "name": "Spell Tome: Magelight", "command": "player.additem A26E2 1"},
+    {"id": "A26E3", "name": "Spell Tome: Stoneflesh", "command": "player.additem A26E3 1"},
+    {"id": "A26E4", "name": "Spell Tome: Ironflesh", "command": "player.additem A26E4 1"},
+    {"id": "A26E5", "name": "Spell Tome: Telekinesis", "command": "player.additem A26E5 1"},
+    {"id": "A26E6", "name": "Spell Tome: Waterbreathing", "command": "player.additem A26E6 1"},
+    {"id": "A26E7", "name": "Spell Tome: Detect Life", "command": "player.additem A26E7 1"},
+    {"id": "A26E8", "name": "Spell Tome: Paralyze", "command": "player.additem A26E8 1"},
+    {"id": "A26E9", "name": "Spell Tome: Ebonyflesh", "command": "player.additem A26E9 1"},
+    {"id": "A26EA", "name": "Spell Tome: Detect Undead", "command": "player.additem A26EA 1"},
+    {"id": "A26EB", "name": "Spell Tome: Reanimate Corpse", "command": "player.additem A26EB 1"},
+    {"id": "A26EC", "name": "Spell Tome: Conjure Flame Atronach", "command": "player.additem A26EC 1"},
+    {"id": "A26ED", "name": "Spell Tome: Bound Battleaxe", "command": "player.additem A26ED 1"},
+    {"id": "A26EE", "name": "Spell Tome: Banish Daedra", "command": "player.additem A26EE 1"},
+    {"id": "A26EF", "name": "Spell Tome: Conjure Frost Atronach", "command": "player.additem A26EF 1"},
+    {"id": "A26F0", "name": "Spell Tome: Conjure Storm Atronach", "command": "player.additem A26F0 1"},
+    {"id": "A26F1", "name": "Spell Tome: Bound Bow", "command": "player.additem A26F1 1"},
+    {"id": "A26F2", "name": "Spell Tome: Revenant", "command": "player.additem A26F2 1"},
+    {"id": "A26F6", "name": "Spell Tome: Command Daedra", "command": "player.additem A26F6 1"},
+    {"id": "A26F7", "name": "Spell Tome: Dread Zombie", "command": "player.additem A26F7 1"},
+    {"id": "A26F8", "name": "Spell Tome: Expel Daedra", "command": "player.additem A26F8 1"},
+    {"id": "A26F9", "name": "Spell Tome: Dead Thrall", "command": "player.additem A26F9 1"},
+    {"id": "A26FA", "name": "Spell Tome: Flame Thrall", "command": "player.additem A26FA 1"},
+    {"id": "A26FB", "name": "Spell Tome: Frost Thrall", "command": "player.additem A26FB 1"},
+    {"id": "A26FC", "name": "Spell Tome: Storm Thrall", "command": "player.additem A26FC 1"},
+    {"id": "A26FD", "name": "Spell Tome: Firebolt", "command": "player.additem A26FD 1"},
+    {"id": "A26FE", "name": "Spell Tome: Ice Spike", "command": "player.additem A26FE 1"},
+    {"id": "A26FF", "name": "Spell Tome: Lightning Bolt", "command": "player.additem A26FF 1"},
+    {"id": "A2700", "name": "Spell Tome: Fire Rune", "command": "player.additem A2700 1"},
+    {"id": "A2701", "name": "Spell Tome: Frost Rune", "command": "player.additem A2701 1"},
+    {"id": "A2702", "name": "Spell Tome: Shock Rune", "command": "player.additem A2702 1"},
+    {"id": "A2703", "name": "Spell Tome: Flame Cloak", "command": "player.additem A2703 1"},
+    {"id": "A2704", "name": "Spell Tome: Frost Cloak", "command": "player.additem A2704 1"},
+    {"id": "A2705", "name": "Spell Tome: Lightning Cloak", "command": "player.additem A2705 1"},
+    {"id": "A2706", "name": "Spell Tome: Fireball", "command": "player.additem A2706 1"},
+    {"id": "A2707", "name": "Spell Tome: Ice Storm", "command": "player.additem A2707 1"},
+    {"id": "A2708", "name": "Spell Tome: Chain Lightning", "command": "player.additem A2708 1"},
+    {"id": "A2709", "name": "Spell Tome: Wall of Flames", "command": "player.additem A2709 1"},
+    {"id": "A270A", "name": "Spell Tome: Wall of Frost", "command": "player.additem A270A 1"},
+    {"id": "A270B", "name": "Spell Tome: Wall of Storms", "command": "player.additem A270B 1"},
+    {"id": "A270C", "name": "Spell Tome: Fire Storm", "command": "player.additem A270C 1"},
+    {"id": "A270D", "name": "Spell Tome: Blizzard", "command": "player.additem A270D 1"},
+    {"id": "A270E", "name": "Spell Tome: Lightning Storm", "command": "player.additem A270E 1"},
+    {"id": "A270F", "name": "Spell Tome: Muffle", "command": "player.additem A270F 1"},
+    {"id": "A2711", "name": "Spell Tome: Calm", "command": "player.additem A2711 1"},
+    {"id": "A2712", "name": "Spell Tome: Fear", "command": "player.additem A2712 1"},
+    {"id": "A2713", "name": "Spell Tome: Rally", "command": "player.additem A2713 1"},
+    {"id": "A2714", "name": "Spell Tome: Frenzy", "command": "player.additem A2714 1"},
+    {"id": "A2715", "name": "Spell Tome: Invisibility", "command": "player.additem A2715 1"},
+    {"id": "A2717", "name": "Spell Tome: Pacify", "command": "player.additem A2717 1"},
+    {"id": "A2718", "name": "Spell Tome: Rout", "command": "player.additem A2718 1"},
+    {"id": "A2719", "name": "Spell Tome: Mayhem", "command": "player.additem A2719 1"},
+    {"id": "A271A", "name": "Spell Tome: Harmony", "command": "player.additem A271A 1"},
+    {"id": "A271B", "name": "Spell Tome: Call to Arms", "command": "player.additem A271B 1"},
+    {"id": "A271C", "name": "Spell Tome: Hysteria", "command": "player.additem A271C 1"},
+    {"id": "A271D", "name": "Spell Tome: Fast Healing", "command": "player.additem A271D 1"},
+    {"id": "A271E", "name": "Spell Tome: Healing Hands", "command": "player.additem A271E 1"},
+    {"id": "A271F", "name": "Spell Tome: Turn Lesser Undead", "command": "player.additem A271F 1"},
+    {"id": "A2720", "name": "Spell Tome: Steadfast Ward", "command": "player.additem A2720 1"},
+    {"id": "A2721", "name": "Spell Tome: Turn Undead", "command": "player.additem A2721 1"},
+    {"id": "A2722", "name": "Spell Tome: Greater Ward", "command": "player.additem A2722 1"},
+    {"id": "A2725", "name": "Spell Tome: Repel Lesser Undead", "command": "player.additem A2725 1"},
+    {"id": "A2726", "name": "Spell Tome: Repel Undead", "command": "player.additem A2726 1"},
+    {"id": "A2727", "name": "Spell Tome: Heal Other", "command": "player.additem A2727 1"},
+    {"id": "A2728", "name": "Spell Tome: Circle of Protection", "command": "player.additem A2728 1"},
+    {"id": "A2729", "name": "Spell Tome: Turn Greater Undead", "command": "player.additem A2729 1"},
+    {"id": "D2B4E", "name": "Spell Tome: Dragonhide", "command": "player.additem D2B4E 1"},
+    {"id": "DD643", "name": "Spell Tome: Grand Healing", "command": "player.additem DD643 1"},
+    {"id": "DD646", "name": "Spell Tome: Mass Paralysis", "command": "player.additem DD646 1"},
+    {"id": "DD647", "name": "Spell Tome: Bane of the Undead", "command": "player.additem DD647 1"},
+    {"id": "F4997", "name": "Spell Tome: Equilibrium", "command": "player.additem F4997 1"},
+    {"id": "FDE7B", "name": "Spell Tome: Guardian Circle", "command": "player.additem FDE7B 1"},
+    {"id": "FF7D1", "name": "Spell Tome: Clairvoyance", "command": "player.additem FF7D1 1"},
+    {"id": "109112", "name": "Spell Tome: Transmute Ore Mineral", "command": "player.additem 109112 1"},
+    {"id": "10F64D", "name": "Spell Tome: Close Wounds", "command": "player.additem 10F64D 1"},
+    {"id": "10F7F3", "name": "Spell Tome: Icy Spear", "command": "player.additem 10F7F3 1"},
+    {"id": "10F7F4", "name": "Spell Tome: Incinerate", "command": "player.additem 10F7F4 1"},
+    {"id": "10F7F5", "name": "Spell Tome: Thunderbolt", "command": "player.additem 10F7F5 1"},
+    {"id": "10FD60", "name": "Spell Tome: Conjure Dremora Lord", "command": "player.additem 10FD60 1"}
+  ],
+  "enchantable_items": [
+    {"id": "877f1", "name": "Gold Diamond Necklace", "type": "necklace"},
+    {"id": "877c9", "name": "Gold Diamond Ring", "type": "ring"},
+    {"id": "877cb", "name": "Gold Sapphire Ring", "type": "ring"},
+    {"id": "139b9", "name": "Daedric Sword", "type": "weapon"},
+    {"id": "139b8", "name": "Daedric Mace", "type": "weapon"},
+    {"id": "139b5", "name": "Daedric Bow", "type": "weapon"},
+    {"id": "1396d", "name": "Daedric Helm", "type": "armor"},
+    {"id": "1396b", "name": "Daedric Armor", "type": "armor"},
+    {"id": "1396c", "name": "Daedric Gauntlets", "type": "armor"},
+    {"id": "1396a", "name": "Daedric Boots", "type": "armor"}
+  ],
+  "magic_effects": {
+    "resistances": [
+      {"id": "10e5c", "name": "Resist Fire", "description": "Increases resistance to fire damage"},
+      {"id": "10e5d", "name": "Resist Frost", "description": "Increases resistance to frost damage"},
+      {"id": "10e5e", "name": "Resist Shock", "description": "Increases resistance to shock damage"},
+      {"id": "10e5f", "name": "Resist Magic", "description": "Increases resistance to magic"},
+      {"id": "10e60", "name": "Resist Poison", "description": "Increases resistance to poison"},
+      {"id": "10e61", "name": "Resist Disease", "description": "Increases resistance to disease"}
+    ],
+    "attributes": [
+      {"id": "10e62", "name": "Fortify Health", "description": "Increases maximum health"},
+      {"id": "10e63", "name": "Fortify Magicka", "description": "Increases maximum magicka"},
+      {"id": "10e64", "name": "Fortify Stamina", "description": "Increases maximum stamina"},
+      {"id": "10e65", "name": "Fortify Health Regen", "description": "Increases health regeneration rate"},
+      {"id": "10e66", "name": "Fortify Magicka Regen", "description": "Increases magicka regeneration rate"},
+      {"id": "10e67", "name": "Fortify Stamina Regen", "description": "Increases stamina regeneration rate"},
+      {"id": "10e68", "name": "Fortify Carry Weight", "description": "Increases carrying capacity"}
+    ],
+    "combat_skills": [
+      {"id": "7a103", "name": "Fortify Sneak", "description": "Improves sneaking ability"},
+      {"id": "10e8af", "name": "Muffle", "description": "Makes your movement quieter"},
+      {"id": "10e69", "name": "Fortify One-Handed", "description": "Increases one-handed weapon damage"},
+      {"id": "10e6a", "name": "Fortify Two-Handed", "description": "Increases two-handed weapon damage"},
+      {"id": "10e6b", "name": "Fortify Archery", "description": "Increases bow damage"},
+      {"id": "10e6c", "name": "Fortify Block", "description": "Improves blocking effectiveness"},
+      {"id": "10e6d", "name": "Fortify Heavy Armor", "description": "Improves heavy armor rating"},
+      {"id": "10e6e", "name": "Fortify Light Armor", "description": "Improves light armor rating"},
+      {"id": "10e6f", "name": "Fortify Smithing", "description": "Improves smithing effectiveness"}
+    ],
+    "magic_skills": [
+      {"id": "10e70", "name": "Fortify Destruction", "description": "Reduces destruction spell costs"},
+      {"id": "10e71", "name": "Fortify Conjuration", "description": "Reduces conjuration spell costs"},
+      {"id": "10e72", "name": "Fortify Restoration", "description": "Reduces restoration spell costs"},
+      {"id": "10e73", "name": "Fortify Alteration", "description": "Reduces alteration spell costs"},
+      {"id": "10e74", "name": "Fortify Illusion", "description": "Reduces illusion spell costs"},
+      {"id": "10e75", "name": "Fortify Enchanting", "description": "Improves enchanting effectiveness"}
+    ],
+    "utility": [
+      {"id": "6b10c", "name": "Night Eye", "description": "Grants night vision"},
+      {"id": "10e76", "name": "Waterbreathing", "description": "Allows breathing underwater"},
+      {"id": "10e77", "name": "Fortify Lockpicking", "description": "Makes lockpicking easier"},
+      {"id": "10e78", "name": "Fortify Pickpocket", "description": "Improves pickpocketing success"},
+      {"id": "10e79", "name": "Fortify Speech", "description": "Improves persuasion and prices"},
+      {"id": "10e7a", "name": "Fortify Alchemy", "description": "Improves potion and poison effectiveness"}
+    ],
+    "special": [
+      {"id": "10dded", "name": "Summon Dremora Lord", "description": "Permanent Dremora Lord companion"},
+      {"id": "6a154", "name": "Summon Shade", "description": "Permanent Shade companion"},
+      {"id": "10e7b", "name": "Absorb Health", "description": "Drain health from enemies"},
+      {"id": "10e7c", "name": "Absorb Magicka", "description": "Drain magicka from enemies"},
+      {"id": "10e7d", "name": "Absorb Stamina", "description": "Drain stamina from enemies"}
+    ]
+  },
+  "enchanting_examples": [
+    {"command": "playerenchantobject 877f1 10dded", "description": "Necklace that will give you a permanent Dremora Lord Pet"},
+    {"command": "playerenchantobject 877c9 6a154", "description": "Ring that will give you a permanent Shade of Anriel Gane"},
+    {"command": "playerenchantobject 877c9 7a103 10e8af", "description": "Ring that will improve your Sneaking and will make you harder to detect"},
+    {"command": "playerenchantobject 877c9 6b10c", "description": "Ring that will grant night vision"}
+  ],
+  "container_spawns": [
+    {"id": "c2cd4", "name": "All Ammo", "command": "player.placeatme c2cd4"},
+    {"id": "c2cd6", "name": "Standard Armor", "command": "player.placeatme c2cd6"},
+    {"id": "c2cd7", "name": "Enchanted Armor", "command": "player.placeatme c2cd7"},
+    {"id": "c2cd8", "name": "Clothes and Jewelry", "command": "player.placeatme c2cd8"},
+    {"id": "c2cd9", "name": "Spell Tomes", "command": "player.placeatme c2cd9"},
+    {"id": "c2cda", "name": "All Ingredients", "command": "player.placeatme c2cda"},
+    {"id": "c2cdb", "name": "All Keys", "command": "player.placeatme c2cdb"},
+    {"id": "c2cde", "name": "Staffs", "command": "player.placeatme c2cde"},
+    {"id": "c2cdf", "name": "Enchanted Weapons", "command": "player.placeatme c2cdf"},
+    {"id": "c2ce0", "name": "Standard Weapons", "command": "player.placeatme c2ce0"},
+    {"id": "c2ce1", "name": "Scrolls", "command": "player.placeatme c2ce1"},
+    {"id": "c2ce2", "name": "Potions", "command": "player.placeatme c2ce2"},
+    {"id": "c2d3b", "name": "Books", "command": "player.placeatme c2d3b"},
+    {"id": "10d9ff", "name": "Skill Books", "command": "player.placeatme 10d9ff"}
+  ],
+  "crafting_stations": [
+    {"id": "1a2ad", "name": "Anvil", "command": "player.placeatme 1a2ad"},
+    {"id": "bad0c", "name": "Alchemy Lab (Floor)", "command": "player.placeatme bad0c"},
+    {"id": "d54ff", "name": "Alchemy Lab (Wall)", "command": "player.placeatme d54ff"},
+    {"id": "bad0d", "name": "Arcane Enchanter (Floor)", "command": "player.placeatme bad0d"},
+    {"id": "d5501", "name": "Arcane Enchanter (Wall)", "command": "player.placeatme d5501"},
+    {"id": "bf9e1", "name": "Forge", "command": "player.placeatme bf9e1"},
+    {"id": "bbcf1", "name": "Forge (Outside)", "command": "player.placeatme bbcf1"},
+    {"id": "6e9c2", "name": "Grindstone", "command": "player.placeatme 6e9c2"},
+    {"id": "9c6ce", "name": "Smelter", "command": "player.placeatme 9c6ce"},
+    {"id": "d932f", "name": "Workbench", "command": "player.placeatme d932f"}
+  ],
+  "fun_items": [
+    {"id": "10bf90", "name": "Spectral Horse (ridable)", "command": "player.placeatme 10bf90"},
+    {"id": "107eee", "name": "Dragon", "command": "player.placeatme 107eee"}
+  ],
+  "decorating_commands": {
+    "markfordelete": {
+      "command": "markfordelete",
+      "description": "Click on an object you want to remove, leave/enter or save/load an area to delete the marked object"
+    },
+    "placeatme": {
+      "command": "placeatme [object-id]",
+      "description": "While in console click an item and it will place item [object-id] next to it"
+    },
+    "twf": {
+      "command": "twf",
+      "description": "Toggle wireframe view to view problems with objects"
+    },
+    "getpos": {
+      "command": "getpos [axis]",
+      "description": "Returns the position in axis value of the selected object (e.g., getpos x)"
+    },
+    "setpos": {
+      "command": "setpos [axis] [value]",
+      "description": "Sets the position of the selected object (e.g., setpos z 200)"
+    },
+    "getangle": {
+      "command": "getangle [axis]",
+      "description": "Returns the angle of the selected object (e.g., getangle y)"
+    },
+    "setangle": {
+      "command": "setangle [axis] [value]",
+      "description": "Sets the angle of the selected object (e.g., setangle x 45)"
+    },
+    "rotate": {
+      "command": "rotate [axis] [value]",
+      "description": "Rotates the selected object manually (e.g., rotate x 45)"
+    }
+  }
+}
