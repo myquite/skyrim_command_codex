@@ -645,7 +645,8 @@
   "basic_items": {
     "gold": {"id": "f", "command": "player.additem f 1000", "name": "Gold"},
     "lockpick": {"id": "a", "command": "player.additem a 1", "name": "Lockpick"},
-    "ultimate_healing_potion": {"id": "39be5", "command": "player.additem 39be5 1", "name": "Ultimate Healing Potion"}
+    "ultimate_healing_potion": {"id": "39be5", "command": "player.additem 39be5 1", "name": "Ultimate Healing Potion"},
+    "extreme_magicka_potion": {"id": "39be6", "command": "player.additem 39be6 1", "name": "Extreme Magicka Potion"}
   },
   "weapons": {
     "unique": [
