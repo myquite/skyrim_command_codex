@@ -128,6 +128,117 @@ For general or player commands:
 }
 ```
 
+## Contributing to the Alchemy Guide
+
+The Alchemy Guide uses `alchemy_data.json` to store ingredients, effects, and recipes.
+
+### Adding Alchemy Effects
+
+Effects are the magical properties that ingredients produce. Add to the `effects` section:
+
+```json
+"effects": {
+  "effect_key": {
+    "name": "Effect Name",
+    "type": "beneficial",
+    "description": "What this effect does"
+  }
+}
+```
+
+**Required fields:**
+- `name`: Display name (e.g., "Restore Health")
+- `type`: Either `"beneficial"` or `"harmful"`
+- `description`: Brief explanation of the effect
+
+**Example:**
+```json
+"fortify_stamina": {
+  "name": "Fortify Stamina",
+  "type": "beneficial",
+  "description": "Increases maximum Stamina"
+}
+```
+
+### Adding Ingredients
+
+Ingredients are items that can be combined to create potions. Add to the `ingredients` array:
+
+```json
+{
+  "name": "Ingredient Name",
+  "id": "item_id_from_skyrim",
+  "category": "plant",
+  "effects": ["effect_key1", "effect_key2", "effect_key3", "effect_key4"]
+}
+```
+
+**Required fields:**
+- `name`: Display name exactly as it appears in-game
+- `id`: Skyrim item ID (hex format)
+- `category`: One of: `"plant"`, `"fungus"`, `"animal"`, `"special"`
+- `effects`: Array of 4 effect keys (must match keys in `effects` section)
+
+**Example:**
+```json
+{
+  "name": "Blue Mountain Flower",
+  "id": "0004da25",
+  "category": "plant",
+  "effects": ["restore_health", "fortify_conjuration", "fortify_health", "damage_magicka_regen"]
+}
+```
+
+**Important:**
+- Every ingredient must have exactly 4 effects
+- Effect keys must exist in the `effects` section
+- Order matters - list effects in the order they appear in-game
+
+### Adding Recipes
+
+Recipes show popular ingredient combinations. Add to the `recipes` array:
+
+```json
+{
+  "name": "Potion Name",
+  "ingredients": ["Ingredient 1", "Ingredient 2"],
+  "effects": ["effect_key1", "effect_key2"],
+  "value": "high"
+}
+```
+
+**Required fields:**
+- `name`: Descriptive potion name
+- `ingredients`: Array of 2-3 ingredient names (must match names in `ingredients` array)
+- `effects`: Array of shared effect keys between ingredients
+- `value`: Potion value - `"very_high"`, `"high"`, `"medium"`, or `"low"`
+
+**Example:**
+```json
+{
+  "name": "Fortify Smithing Potion",
+  "ingredients": ["Blisterwort", "Glowing Mushroom"],
+  "effects": ["fortify_smithing"],
+  "value": "high"
+}
+```
+
+**Tips:**
+- Only include recipes that work (shared effects between ingredients)
+- Focus on useful/popular combinations
+- Verify ingredients exist in the `ingredients` array
+
+### Testing Alchemy Changes
+
+1. Open `alchemy.html` in a web browser
+2. Search for your new effect or ingredient
+3. Switch between categories (Beneficial, Harmful, Recipes)
+4. Verify:
+   - Effects show correct ingredients
+   - Ingredient tags are clickable and copy commands
+   - Recipes display properly with correct spawn commands
+5. Test console commands in-game to ensure IDs are correct
+
 ## JSON Formatting Rules
 
 1. **Use lowercase with underscores** for keys: `extreme_magicka_potion`
@@ -148,13 +259,20 @@ For general or player commands:
 
 Before submitting a pull request:
 
-- [ ] JSON file is valid (use [JSONLint](https://jsonlint.com/) to check)
+- [ ] JSON file(s) are valid (use [JSONLint](https://jsonlint.com/) to check)
 - [ ] All item IDs are verified and tested in-game
 - [ ] Commands are properly formatted
 - [ ] Names are spelled correctly and match in-game names
-- [ ] Items appear correctly on the website when tested locally
+- [ ] Items/ingredients appear correctly on the website when tested locally
 - [ ] No duplicate entries exist
 - [ ] File is properly formatted with consistent indentation (2 spaces)
+
+**For Alchemy Guide contributions:**
+- [ ] Effect keys use lowercase with underscores
+- [ ] All ingredients have exactly 4 effects
+- [ ] Recipe ingredients exist in the ingredients array
+- [ ] Effect keys referenced in ingredients/recipes exist in effects section
+- [ ] Tested in `alchemy.html` to verify display and functionality
 
 ## Pull Request Guidelines
 

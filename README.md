@@ -6,7 +6,8 @@ A retro 16-bit styled web application for browsing, searching, and copying Skyri
 
 - **🔍 Powerful Search** - Instantly search through hundreds of console commands, items, and codes
 - **📂 Category Filtering** - Browse by category: General Commands, Player Commands, Perks, Dragon Shouts, Weapons, Armor, Spells, and Items
-- **⚗️ Enchantment Builder** - Interactive tool to create custom enchanted items with up to 2 enchantments
+- **⚗️ Alchemy Guide** - Complete ingredient database with effects, recipes, and console commands for spawning ingredients
+- **⚡ Enchantment Builder** - Interactive tool to create custom enchanted items with up to 2 enchantments
 - **📋 One-Click Copy** - Click any command card to instantly copy it to your clipboard
 - **📜 Complete Guide** - Built-in tutorial explaining how to use console commands and batch files
 - **🎮 Retro Aesthetic** - 16-bit pixel art theme with scanlines, glitch effects, and custom pixel borders
@@ -43,9 +44,14 @@ A retro 16-bit styled web application for browsing, searching, and copying Skyri
 skyrim_command_codex/
 ├── index.html                          # Main application page
 ├── guide.html                          # Console command tutorial
+├── alchemy.html                        # Alchemy ingredients & recipes guide
 ├── style.css                           # 16-bit retro styling
-├── script.js                           # Application logic
+├── script.js                           # Command Codex logic
+├── alchemy.js                          # Alchemy Guide logic
 ├── skyrim_commands_and_items.json     # Command database
+├── alchemy_data.json                   # Alchemy ingredients, effects & recipes
+├── CONTRIBUTING.md                     # Contribution guidelines
+├── SECURITY.md                         # Security policy
 └── README.md                           # This file
 ```
 
