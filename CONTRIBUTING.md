@@ -134,7 +134,7 @@ For general or player commands:
 2. **Include all required fields** (id, name/command, description where applicable)
 3. **Verify IDs are correct** - test them in-game first
 4. **Use proper JSON syntax** - watch for trailing commas, quotes, and brackets
-5. **Maintain alphabetical order** within sections when possible
+5. **Order by usage frequency** - Place most commonly used items first (e.g., gold, lockpicks before rare potions)
 
 ## Testing Your Changes
 

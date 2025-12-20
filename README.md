@@ -19,7 +19,7 @@ A retro 16-bit styled web application for browsing, searching, and copying Skyri
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/skyrim_command_codex.git
+   git clone https://github.com/myquite/skyrim_command_codex.git
    cd skyrim_command_codex
    ```
 
@@ -91,12 +91,17 @@ This project is open source and available for personal use. Skyrim and The Elder
 
 ## 🤝 Contributing
 
-Contributions are welcome! Feel free to:
-- Report bugs
-- Suggest new features
-- Add more commands to the database
-- Improve the UI/UX
-- Fix typos or improve documentation
+Contributions are welcome! This is an open-source project and we'd love your help making it better.
+
+**📜 [Read the Contributing Guide](CONTRIBUTING.md)** - Learn how to add commands, items, and features
+
+**Quick Start for Contributors:**
+- Add new items, weapons, armor, or perks to the JSON database
+- Improve documentation or fix bugs
+- Suggest new features or enhancements
+- Report issues or security vulnerabilities
+
+**Security:** Found a security issue? Please review our [Security Policy](SECURITY.md) for responsible disclosure guidelines.
 
 ## 🔮 Future Enhancements
 

@@ -176,6 +176,17 @@ h1 {
     color: #666;
 }
 
+.search-section .stat {
+    display: block;
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--border-color);
+    font-size: 0.7rem;
+    color: var(--accent-gold);
+    letter-spacing: 0.05em;
+}
+
 /* Category Navigation */
 .category-nav {
     background: var(--secondary-bg);
@@ -450,7 +461,7 @@ h1 {
     padding: 1rem;
     margin-bottom: 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
@@ -655,6 +666,23 @@ footer p {
 .footer-tip {
     color: var(--accent-blue);
     font-size: 0.5rem;
+}
+
+.footer-github {
+    margin-top: 1rem;
+    font-size: 0.6rem;
+}
+
+.footer-github a {
+    color: var(--accent-gold);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.3rem 0.5rem;
+}
+
+.footer-github a:hover {
+    color: var(--text-gold);
+    text-shadow: 0 0 10px var(--accent-gold);
 }
 
 /* Toast Notification */
