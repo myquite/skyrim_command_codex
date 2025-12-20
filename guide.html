@@ -11,87 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .guide-content {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 2rem;
-        }
-
-        .guide-section {
-            background: var(--secondary-bg);
-            padding: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .guide-section h2 {
-            color: var(--text-gold);
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-
-        .guide-section h3 {
-            color: var(--accent-blue);
-            font-size: 0.9rem;
-            margin: 1.5rem 0 1rem 0;
-        }
-
-        .guide-section p,
-        .guide-section li {
-            font-size: 0.7rem;
-            line-height: 1.8;
-            margin-bottom: 1rem;
-            color: var(--text-light);
-        }
-
-        .guide-section ul,
-        .guide-section ol {
-            margin-left: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .code-block {
-            background: var(--primary-bg);
-            border: 2px solid var(--border-color);
-            padding: 1rem;
-            margin: 1rem 0;
-            font-family: 'Courier New', monospace;
-            font-size: 0.7rem;
-            color: var(--accent-gold);
-            overflow-x: auto;
-        }
-
-        .warning {
-            background: rgba(255, 68, 68, 0.1);
-            border-left: 4px solid #ff4444;
-            padding: 1rem;
-            margin: 1rem 0;
-        }
-
-        .tip {
-            background: rgba(76, 175, 80, 0.1);
-            border-left: 4px solid var(--success);
-            padding: 1rem;
-            margin: 1rem 0;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-bottom: 2rem;
-            padding: 1rem 2rem;
-            background: var(--secondary-bg);
-            color: var(--text-gold);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .back-link:hover {
-            background: var(--hover-bg);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 0 var(--border-color);
-        }
-    </style>
 </head>
 <body>
     <div class="scanlines"></div>
@@ -255,7 +174,10 @@
                 </div>
             </div>
 
-            <a href="index.html" class="back-link pixel-border">← BACK TO COMMAND CODEX</a>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                <a href="index.html" class="back-link pixel-border">← BACK TO COMMAND CODEX</a>
+                <a href="alchemy.html" class="back-link pixel-border">⚗️ ALCHEMY GUIDE</a>
+            </div>
         </div>
 
         <footer class="pixel-border">

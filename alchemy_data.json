@@ -1,0 +1,571 @@
+{
+  "effects": {
+    "restore_health": {
+      "name": "Restore Health",
+      "type": "beneficial",
+      "description": "Restores Health over time"
+    },
+    "restore_magicka": {
+      "name": "Restore Magicka",
+      "type": "beneficial",
+      "description": "Restores Magicka over time"
+    },
+    "restore_stamina": {
+      "name": "Restore Stamina",
+      "type": "beneficial",
+      "description": "Restores Stamina over time"
+    },
+    "fortify_health": {
+      "name": "Fortify Health",
+      "type": "beneficial",
+      "description": "Increases maximum Health"
+    },
+    "fortify_magicka": {
+      "name": "Fortify Magicka",
+      "type": "beneficial",
+      "description": "Increases maximum Magicka"
+    },
+    "fortify_stamina": {
+      "name": "Fortify Stamina",
+      "type": "beneficial",
+      "description": "Increases maximum Stamina"
+    },
+    "damage_health": {
+      "name": "Damage Health",
+      "type": "harmful",
+      "description": "Damages Health"
+    },
+    "damage_magicka": {
+      "name": "Damage Magicka",
+      "type": "harmful",
+      "description": "Damages Magicka"
+    },
+    "damage_stamina": {
+      "name": "Damage Stamina",
+      "type": "harmful",
+      "description": "Damages Stamina"
+    },
+    "damage_magicka_regen": {
+      "name": "Damage Magicka Regen",
+      "type": "harmful",
+      "description": "Decreases Magicka regeneration"
+    },
+    "damage_stamina_regen": {
+      "name": "Damage Stamina Regen",
+      "type": "harmful",
+      "description": "Decreases Stamina regeneration"
+    },
+    "fortify_carry_weight": {
+      "name": "Fortify Carry Weight",
+      "type": "beneficial",
+      "description": "Increases carrying capacity"
+    },
+    "fortify_one_handed": {
+      "name": "Fortify One-Handed",
+      "type": "beneficial",
+      "description": "Increases One-Handed damage"
+    },
+    "fortify_two_handed": {
+      "name": "Fortify Two-Handed",
+      "type": "beneficial",
+      "description": "Increases Two-Handed damage"
+    },
+    "fortify_archery": {
+      "name": "Fortify Archery",
+      "type": "beneficial",
+      "description": "Increases bow damage"
+    },
+    "fortify_destruction": {
+      "name": "Fortify Destruction",
+      "type": "beneficial",
+      "description": "Increases Destruction spell effectiveness"
+    },
+    "fortify_restoration": {
+      "name": "Fortify Restoration",
+      "type": "beneficial",
+      "description": "Increases Restoration spell effectiveness"
+    },
+    "fortify_alteration": {
+      "name": "Fortify Alteration",
+      "type": "beneficial",
+      "description": "Increases Alteration spell effectiveness"
+    },
+    "fortify_conjuration": {
+      "name": "Fortify Conjuration",
+      "type": "beneficial",
+      "description": "Increases Conjuration spell effectiveness"
+    },
+    "fortify_illusion": {
+      "name": "Fortify Illusion",
+      "type": "beneficial",
+      "description": "Increases Illusion spell effectiveness"
+    },
+    "fortify_enchanting": {
+      "name": "Fortify Enchanting",
+      "type": "beneficial",
+      "description": "Increases enchanting strength"
+    },
+    "fortify_smithing": {
+      "name": "Fortify Smithing",
+      "type": "beneficial",
+      "description": "Increases smithing effectiveness"
+    },
+    "fortify_alchemy": {
+      "name": "Fortify Alchemy",
+      "type": "beneficial",
+      "description": "Increases alchemy effectiveness"
+    },
+    "fortify_pickpocket": {
+      "name": "Fortify Pickpocket",
+      "type": "beneficial",
+      "description": "Increases pickpocket success chance"
+    },
+    "fortify_lockpicking": {
+      "name": "Fortify Lockpicking",
+      "type": "beneficial",
+      "description": "Increases lockpicking effectiveness"
+    },
+    "fortify_sneak": {
+      "name": "Fortify Sneak",
+      "type": "beneficial",
+      "description": "Increases sneaking effectiveness"
+    },
+    "invisibility": {
+      "name": "Invisibility",
+      "type": "beneficial",
+      "description": "Makes you invisible"
+    },
+    "paralysis": {
+      "name": "Paralysis",
+      "type": "harmful",
+      "description": "Paralyzes the target"
+    },
+    "slow": {
+      "name": "Slow",
+      "type": "harmful",
+      "description": "Slows the target"
+    },
+    "fear": {
+      "name": "Fear",
+      "type": "harmful",
+      "description": "Causes target to flee"
+    },
+    "frenzy": {
+      "name": "Frenzy",
+      "type": "harmful",
+      "description": "Causes target to attack anyone nearby"
+    },
+    "resist_fire": {
+      "name": "Resist Fire",
+      "type": "beneficial",
+      "description": "Increases resistance to fire"
+    },
+    "resist_frost": {
+      "name": "Resist Frost",
+      "type": "beneficial",
+      "description": "Increases resistance to frost"
+    },
+    "resist_shock": {
+      "name": "Resist Shock",
+      "type": "beneficial",
+      "description": "Increases resistance to shock"
+    },
+    "resist_magic": {
+      "name": "Resist Magic",
+      "type": "beneficial",
+      "description": "Increases resistance to magic"
+    },
+    "resist_poison": {
+      "name": "Resist Poison",
+      "type": "beneficial",
+      "description": "Increases resistance to poison"
+    },
+    "waterbreathing": {
+      "name": "Waterbreathing",
+      "type": "beneficial",
+      "description": "Breathe underwater"
+    },
+    "cure_disease": {
+      "name": "Cure Disease",
+      "type": "beneficial",
+      "description": "Cures all diseases"
+    },
+    "regenerate_health": {
+      "name": "Regenerate Health",
+      "type": "beneficial",
+      "description": "Increases Health regeneration"
+    },
+    "regenerate_magicka": {
+      "name": "Regenerate Magicka",
+      "type": "beneficial",
+      "description": "Increases Magicka regeneration"
+    },
+    "regenerate_stamina": {
+      "name": "Regenerate Stamina",
+      "type": "beneficial",
+      "description": "Increases Stamina regeneration"
+    },
+    "weakness_to_fire": {
+      "name": "Weakness to Fire",
+      "type": "harmful",
+      "description": "Decreases resistance to fire"
+    },
+    "weakness_to_frost": {
+      "name": "Weakness to Frost",
+      "type": "harmful",
+      "description": "Decreases resistance to frost"
+    },
+    "weakness_to_shock": {
+      "name": "Weakness to Shock",
+      "type": "harmful",
+      "description": "Decreases resistance to shock"
+    },
+    "weakness_to_magic": {
+      "name": "Weakness to Magic",
+      "type": "harmful",
+      "description": "Decreases resistance to magic"
+    },
+    "weakness_to_poison": {
+      "name": "Weakness to Poison",
+      "type": "harmful",
+      "description": "Decreases resistance to poison"
+    },
+    "lingering_damage_health": {
+      "name": "Lingering Damage Health",
+      "type": "harmful",
+      "description": "Damages Health over time"
+    },
+    "lingering_damage_magicka": {
+      "name": "Lingering Damage Magicka",
+      "type": "harmful",
+      "description": "Damages Magicka over time"
+    },
+    "lingering_damage_stamina": {
+      "name": "Lingering Damage Stamina",
+      "type": "harmful",
+      "description": "Damages Stamina over time"
+    }
+  },
+  "ingredients": [
+    {
+      "name": "Wheat",
+      "id": "64b3f",
+      "category": "plant",
+      "effects": ["restore_health", "fortify_health", "damage_stamina_regen", "lingering_damage_magicka"]
+    },
+    {
+      "name": "Blue Mountain Flower",
+      "id": "0004da25",
+      "category": "plant",
+      "effects": ["restore_health", "fortify_conjuration", "fortify_health", "damage_magicka_regen"]
+    },
+    {
+      "name": "Blue Butterfly Wing",
+      "id": "0007bc0b",
+      "category": "animal",
+      "effects": ["restore_health", "fortify_conjuration", "damage_stamina_regen", "fortify_enchanting"]
+    },
+    {
+      "name": "Blisterwort",
+      "id": "0007e8bb",
+      "category": "fungus",
+      "effects": ["damage_health", "fortify_smithing", "frenzy", "restore_magicka"]
+    },
+    {
+      "name": "Glowing Mushroom",
+      "id": "0007e8bd",
+      "category": "fungus",
+      "effects": ["resist_shock", "fortify_destruction", "fortify_smithing", "fortify_health"]
+    },
+    {
+      "name": "Creep Cluster",
+      "id": "0007e8c0",
+      "category": "plant",
+      "effects": ["restore_magicka", "damage_stamina_regen", "fortify_carry_weight", "weakness_to_magic"]
+    },
+    {
+      "name": "Mora Tapinella",
+      "id": "0007e8c2",
+      "category": "fungus",
+      "effects": ["restore_magicka", "lingering_damage_health", "regenerate_stamina", "fortify_illusion"]
+    },
+    {
+      "name": "Scaly Pholiota",
+      "id": "0007e8c3",
+      "category": "fungus",
+      "effects": ["weakness_to_magic", "fortify_illusion", "regenerate_stamina", "fortify_carry_weight"]
+    },
+    {
+      "name": "Imp Stool",
+      "id": "0007e8c7",
+      "category": "fungus",
+      "effects": ["damage_health", "paralysis", "lingering_damage_health", "restore_health"]
+    },
+    {
+      "name": "Canis Root",
+      "id": "0007e8c8",
+      "category": "plant",
+      "effects": ["damage_stamina", "fortify_one_handed", "fortify_archery", "paralysis"]
+    },
+    {
+      "name": "Elves Ear",
+      "id": "0007e8c9",
+      "category": "plant",
+      "effects": ["restore_magicka", "fortify_archery", "weakness_to_frost", "resist_fire"]
+    },
+    {
+      "name": "Swamp Fungal Pod",
+      "id": "0007e8ca",
+      "category": "fungus",
+      "effects": ["resist_shock", "lingering_damage_magicka", "paralysis", "restore_health"]
+    },
+    {
+      "name": "Hanging Moss",
+      "id": "0007e8cd",
+      "category": "plant",
+      "effects": ["damage_health", "damage_magicka", "fortify_health", "fortify_one_handed"]
+    },
+    {
+      "name": "Lavender",
+      "id": "0007e8ce",
+      "category": "plant",
+      "effects": ["resist_magic", "fortify_stamina", "regenerate_stamina", "fortify_conjuration"]
+    },
+    {
+      "name": "Tundra Cotton",
+      "id": "0007e8cf",
+      "category": "plant",
+      "effects": ["resist_magic", "fortify_magicka", "fortify_block", "fortify_barter"]
+    },
+    {
+      "name": "Giant's Toe",
+      "id": "0003ad63",
+      "category": "animal",
+      "effects": ["damage_health", "fortify_health", "fortify_carry_weight", "damage_stamina"]
+    },
+    {
+      "name": "Bear Claws",
+      "id": "0006bc02",
+      "category": "animal",
+      "effects": ["restore_stamina", "fortify_health", "fortify_one_handed", "damage_magicka_regen"]
+    },
+    {
+      "name": "Chicken's Egg",
+      "id": "0003ad67",
+      "category": "animal",
+      "effects": ["resist_magic", "damage_magicka_regen", "waterbreathing", "lingering_damage_stamina"]
+    },
+    {
+      "name": "Hagraven Claw",
+      "id": "0003ad71",
+      "category": "animal",
+      "effects": ["resist_magic", "lingering_damage_magicka", "fortify_enchanting", "fortify_barter"]
+    },
+    {
+      "name": "Daedra Heart",
+      "id": "0003ad5b",
+      "category": "special",
+      "effects": ["restore_health", "damage_stamina_regen", "damage_magicka", "fear"]
+    },
+    {
+      "name": "Vampire Dust",
+      "id": "0003ad63",
+      "category": "special",
+      "effects": ["invisibility", "restore_magicka", "regenerate_health", "cure_disease"]
+    },
+    {
+      "name": "Nirnroot",
+      "id": "00019e75",
+      "category": "plant",
+      "effects": ["damage_health", "damage_stamina", "invisibility", "resist_magic"]
+    },
+    {
+      "name": "Crimson Nirnroot",
+      "id": "0004da73",
+      "category": "plant",
+      "effects": ["damage_health", "damage_stamina", "invisibility", "resist_magic"]
+    },
+    {
+      "name": "Deathbell",
+      "id": "0004da2f",
+      "category": "plant",
+      "effects": ["damage_health", "slow", "weakness_to_poison", "lingering_damage_health"]
+    },
+    {
+      "name": "Dragon's Tongue",
+      "id": "0004da34",
+      "category": "plant",
+      "effects": ["resist_fire", "fortify_barter", "fortify_illusion", "fortify_two_handed"]
+    },
+    {
+      "name": "Snowberries",
+      "id": "0001cd71",
+      "category": "plant",
+      "effects": ["resist_fire", "fortify_enchanting", "resist_frost", "resist_shock"]
+    },
+    {
+      "name": "Frost Mirriam",
+      "id": "0004da3a",
+      "category": "plant",
+      "effects": ["resist_frost", "fortify_sneak", "damage_stamina_regen", "ravage_magicka"]
+    },
+    {
+      "name": "Juniper Berries",
+      "id": "0001cd72",
+      "category": "plant",
+      "effects": ["weakness_to_fire", "regenerate_health", "fortify_archery", "damage_stamina_regen"]
+    },
+    {
+      "name": "Garlic",
+      "id": "0003ad5e",
+      "category": "plant",
+      "effects": ["resist_poison", "fortify_stamina", "regenerate_magicka", "regenerate_health"]
+    },
+    {
+      "name": "Slaughterfish Egg",
+      "id": "0003ad62",
+      "category": "animal",
+      "effects": ["resist_poison", "fortify_pickpocket", "lingering_damage_health", "fortify_stamina"]
+    },
+    {
+      "name": "Slaughterfish Scales",
+      "id": "0003ad64",
+      "category": "animal",
+      "effects": ["resist_frost", "lingering_damage_health", "fortify_heavy_armor", "fortify_block"]
+    },
+    {
+      "name": "Bone Meal",
+      "id": "00034cdf",
+      "category": "special",
+      "effects": ["damage_stamina", "resist_fire", "fortify_conjuration", "ravage_stamina"]
+    },
+    {
+      "name": "Ectoplasm",
+      "id": "00034cde",
+      "category": "special",
+      "effects": ["restore_magicka", "fortify_destruction", "fortify_magicka", "damage_health"]
+    },
+    {
+      "name": "Void Salts",
+      "id": "0003ad60",
+      "category": "special",
+      "effects": ["weakness_to_shock", "resist_magic", "damage_health", "fortify_magicka"]
+    },
+    {
+      "name": "Fire Salts",
+      "id": "0003ad5e",
+      "category": "special",
+      "effects": ["weakness_to_frost", "resist_fire", "restore_magicka", "regenerate_magicka"]
+    },
+    {
+      "name": "Frost Salts",
+      "id": "0003ad5f",
+      "category": "special",
+      "effects": ["weakness_to_fire", "resist_frost", "restore_magicka", "fortify_conjuration"]
+    },
+    {
+      "name": "Chaurus Eggs",
+      "id": "0003ad68",
+      "category": "animal",
+      "effects": ["weakness_to_poison", "fortify_stamina", "damage_magicka", "invisibility"]
+    },
+    {
+      "name": "Luna Moth Wing",
+      "id": "0001ff23",
+      "category": "animal",
+      "effects": ["damage_magicka", "fortify_light_armor", "regenerate_health", "invisibility"]
+    },
+    {
+      "name": "Ancestor Moth Wing",
+      "id": "xx00d099",
+      "category": "animal",
+      "effects": ["damage_stamina", "fortify_conjuration", "damage_magicka_regen", "fortify_enchanting"]
+    },
+    {
+      "name": "Salmon Roe",
+      "id": "xx00f7a7",
+      "category": "animal",
+      "effects": ["restore_stamina", "waterbreathing", "fortify_magicka", "regenerate_magicka"]
+    },
+    {
+      "name": "Histcarp",
+      "id": "0003ad69",
+      "category": "animal",
+      "effects": ["restore_stamina", "fortify_magicka", "damage_stamina_regen", "waterbreathing"]
+    },
+    {
+      "name": "Pearl",
+      "id": "0006851e",
+      "category": "special",
+      "effects": ["restore_stamina", "fortify_block", "restore_magicka", "resist_shock"]
+    },
+    {
+      "name": "Small Pearl",
+      "id": "0006851d",
+      "category": "special",
+      "effects": ["restore_stamina", "fortify_one_handed", "resist_frost", "fortify_restoration"]
+    }
+  ],
+  "recipes": [
+    {
+      "name": "Ultimate Health Potion",
+      "ingredients": ["Wheat", "Blue Mountain Flower"],
+      "effects": ["restore_health", "fortify_health"],
+      "value": "high"
+    },
+    {
+      "name": "Fortify Smithing Potion",
+      "ingredients": ["Blisterwort", "Glowing Mushroom"],
+      "effects": ["fortify_smithing"],
+      "value": "high"
+    },
+    {
+      "name": "Fortify Enchanting Potion",
+      "ingredients": ["Blue Butterfly Wing", "Snowberries"],
+      "effects": ["fortify_enchanting"],
+      "value": "high"
+    },
+    {
+      "name": "Fortify Carry Weight Potion",
+      "ingredients": ["Creep Cluster", "Scaly Pholiota"],
+      "effects": ["fortify_carry_weight"],
+      "value": "medium"
+    },
+    {
+      "name": "Invisibility Potion",
+      "ingredients": ["Chaurus Eggs", "Nirnroot"],
+      "effects": ["invisibility"],
+      "value": "high"
+    },
+    {
+      "name": "Paralysis Poison",
+      "ingredients": ["Canis Root", "Imp Stool"],
+      "effects": ["paralysis"],
+      "value": "high"
+    },
+    {
+      "name": "Waterbreathing Potion",
+      "ingredients": ["Salmon Roe", "Histcarp"],
+      "effects": ["waterbreathing", "fortify_magicka"],
+      "value": "very_high"
+    },
+    {
+      "name": "Fortify Restoration Potion",
+      "ingredients": ["Salt Pile", "Abecean Longfin"],
+      "effects": ["fortify_restoration"],
+      "value": "high"
+    },
+    {
+      "name": "Regenerate Health Potion",
+      "ingredients": ["Garlic", "Juniper Berries"],
+      "effects": ["regenerate_health"],
+      "value": "medium"
+    },
+    {
+      "name": "Damage Health Poison",
+      "ingredients": ["Deathbell", "Imp Stool"],
+      "effects": ["damage_health", "lingering_damage_health"],
+      "value": "medium"
+    }
+  ]
+}
