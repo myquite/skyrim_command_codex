@@ -476,8 +476,8 @@ function createCommandCard(cmd) {
     return `
         <div class="command-card pixel-border" data-command="${escapeHtml(cmd.command)}">
             <div class="card-header">
-                <span class="card-category">${cmd.category}</span>
-                ${cmd.id ? `<span class="card-id">ID: ${cmd.id}</span>` : ''}
+                <span class="card-category">${escapeHtml(cmd.category)}</span>
+                ${cmd.id ? `<span class="card-id">ID: ${escapeHtml(cmd.id)}</span>` : ''}
             </div>
             <div class="card-name">${escapeHtml(cmd.name)}</div>
             <div class="card-command">${escapeHtml(cmd.command)}</div>
